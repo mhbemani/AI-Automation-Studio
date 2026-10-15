@@ -1,0 +1,27 @@
+{
+  "title": "What happens when you open a page?",
+  "durationSec": 15,
+  "bg": "#0f172a",
+  "accent": "#38bdf8",
+  "nodes": [
+    { "id": "browser", "label": "Browser", "sub": "your phone", "at": 1.0, "color": "#38bdf8" },
+    { "id": "api", "label": "API", "sub": "server", "at": 2.0, "color": "#a78bfa" },
+    { "id": "db", "label": "Database", "sub": "stored data", "at": 3.0, "color": "#34d399" }
+  ],
+  "edges": [
+    { "from": "browser", "to": "api", "at": 2.4 },
+    { "from": "api", "to": "db", "at": 3.4 }
+  ],
+  "packets": [
+    { "edge": 0, "label": "GET /profile", "at": 4.5, "dur": 1.6, "color": "#fbbf24" },
+    { "edge": 1, "label": "SELECT user", "at": 6.3, "dur": 1.6, "color": "#fbbf24" },
+    { "edge": 1, "label": "row: Ada", "at": 8.4, "dur": 1.6, "reverse": true, "color": "#34d399" },
+    { "edge": 0, "label": "200 OK + JSON", "at": 10.2, "dur": 1.6, "reverse": true, "color": "#34d399" }
+  ],
+  "captions": [
+    { "text": "1. The browser asks the API", "at": 4.5, "dur": 2.5 },
+    { "text": "2. The API asks the database", "at": 6.3, "dur": 2.5 },
+    { "text": "3. The data travels back", "at": 8.4, "dur": 2.5 },
+    { "text": "4. The page appears", "at": 10.2, "dur": 4.0 }
+  ]
+}

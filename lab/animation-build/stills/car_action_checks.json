@@ -1,0 +1,110 @@
+{
+ "actions": {
+  "CAR_wheel_spin": {
+   "range": [
+    1,
+    13
+   ],
+   "length_ok": true,
+   "fake_user": true,
+   "distance_min_max": [
+    0.0,
+    2.105
+   ],
+   "deg_per_frame": 30.0,
+   "deg_total_one_loop": 360.0,
+   "next_cycle_increment_ok": true,
+   "spoke_alias_ok(<36deg/frame)": true
+  },
+  "CAR_steering_sway": {
+   "range": [
+    1,
+    97
+   ],
+   "length_ok": true,
+   "fake_user": true,
+   "steer_min_max": [
+    -0.073,
+    0.053
+   ],
+   "loop_max_diff": 0.0
+  },
+  "CAR_steering_turn_left": {
+   "range": [
+    1,
+    24
+   ],
+   "length_ok": true,
+   "fake_user": true,
+   "steer_min_max": [
+    -0.64,
+    0.0
+   ]
+  },
+  "CAR_steering_turn_right": {
+   "range": [
+    1,
+    24
+   ],
+   "length_ok": true,
+   "fake_user": true,
+   "steer_min_max": [
+    0.0,
+    0.64
+   ]
+  },
+  "CAR_door_open_L": {
+   "range": [
+    1,
+    24
+   ],
+   "length_ok": true,
+   "fake_user": true,
+   "door_L_min_max": [
+    0.0,
+    1.0
+   ],
+   "door_range_ok": true
+  },
+  "CAR_door_open_R": {
+   "range": [
+    1,
+    24
+   ],
+   "length_ok": true,
+   "fake_user": true,
+   "door_R_min_max": [
+    0.0,
+    1.0
+   ],
+   "door_range_ok": true
+  },
+  "CAR_door_close_L": {
+   "range": [
+    1,
+    24
+   ],
+   "length_ok": true,
+   "fake_user": true,
+   "door_L_min_max": [
+    0.0,
+    1.0
+   ],
+   "door_range_ok": true
+  },
+  "CAR_door_close_R": {
+   "range": [
+    1,
+    24
+   ],
+   "length_ok": true,
+   "fake_user": true,
+   "door_R_min_max": [
+    0.0,
+    1.0
+   ],
+   "door_range_ok": true
+  }
+ },
+ "problems": []
+}

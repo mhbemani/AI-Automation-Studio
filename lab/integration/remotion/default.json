@@ -1,0 +1,522 @@
+{
+ "fps": 30,
+ "transitionSec": 0.5,
+ "durationSec": 26.345,
+ "topic": "What happens when you click Login?",
+ "series": "How Software Actually Works",
+ "scenes": [
+  {
+   "type": "typography",
+   "durationSec": 7.195,
+   "lines": [
+    {
+     "text": "You click Login.",
+     "at": 0.53
+    },
+    {
+     "text": "5 systems. Under 1 second.",
+     "at": 3.5
+    }
+   ]
+  },
+  {
+   "type": "flow",
+   "durationSec": 13.467,
+   "nodes": [
+    {
+     "id": "Browser",
+     "label": "Browser",
+     "at": 0.1,
+     "color": "#38bdf8"
+    },
+    {
+     "id": "API",
+     "label": "API",
+     "at": 0.35,
+     "color": "#a78bfa"
+    },
+    {
+     "id": "Database",
+     "label": "Database",
+     "at": 0.6,
+     "color": "#34d399"
+    }
+   ],
+   "edges": [
+    {
+     "from": "Browser",
+     "to": "API",
+     "at": 0.04999999999999999
+    },
+    {
+     "from": "API",
+     "to": "Database",
+     "at": 0.3
+    }
+   ],
+   "packets": [
+    {
+     "edge": 0,
+     "reverse": false,
+     "label": "POST /login",
+     "at": 1.15,
+     "dur": 1.4,
+     "color": "#fbbf24"
+    },
+    {
+     "edge": 1,
+     "reverse": false,
+     "label": "find user + hash",
+     "at": 3.75,
+     "dur": 1.4,
+     "color": "#38bdf8"
+    },
+    {
+     "edge": 1,
+     "reverse": true,
+     "label": "stored hash",
+     "at": 6.13,
+     "dur": 1.4,
+     "color": "#a78bfa"
+    },
+    {
+     "edge": 0,
+     "reverse": true,
+     "label": "token",
+     "at": 9.51,
+     "dur": 1.4,
+     "color": "#34d399"
+    }
+   ]
+  },
+  {
+   "type": "typography",
+   "durationSec": 6.683,
+   "lines": [
+    {
+     "text": "Every request carries proof.",
+     "at": 0.61
+    },
+    {
+     "text": "That's being logged in.",
+     "at": 2.96
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "at": 0.53,
+   "words": [
+    {
+     "w": "You",
+     "at": 0.53
+    },
+    {
+     "w": "click",
+     "at": 0.73
+    },
+    {
+     "w": "Login.",
+     "at": 1.11
+    }
+   ]
+  },
+  {
+   "at": 1.64,
+   "words": [
+    {
+     "w": "Nothing",
+     "at": 1.64
+    },
+    {
+     "w": "seems",
+     "at": 2.18
+    },
+    {
+     "w": "to",
+     "at": 2.56
+    },
+    {
+     "w": "happen.",
+     "at": 2.71
+    }
+   ]
+  },
+  {
+   "at": 3.24,
+   "words": [
+    {
+     "w": "But",
+     "at": 3.24
+    },
+    {
+     "w": "in",
+     "at": 3.4
+    },
+    {
+     "w": "under",
+     "at": 3.5
+    },
+    {
+     "w": "a",
+     "at": 3.76
+    },
+    {
+     "w": "second,",
+     "at": 3.81
+    }
+   ]
+  },
+  {
+   "at": 4.27,
+   "words": [
+    {
+     "w": "five",
+     "at": 4.27
+    },
+    {
+     "w": "different",
+     "at": 4.51
+    },
+    {
+     "w": "systems",
+     "at": 4.93
+    },
+    {
+     "w": "just",
+     "at": 5.4
+    },
+    {
+     "w": "talked",
+     "at": 5.63
+    }
+   ]
+  },
+  {
+   "at": 6.01,
+   "words": [
+    {
+     "w": "about",
+     "at": 6.01
+    },
+    {
+     "w": "you.",
+     "at": 6.43
+    }
+   ]
+  },
+  {
+   "at": 7.235,
+   "words": [
+    {
+     "w": "Your",
+     "at": 7.235
+    },
+    {
+     "w": "browser",
+     "at": 7.465
+    },
+    {
+     "w": "sends",
+     "at": 7.935
+    },
+    {
+     "w": "your",
+     "at": 8.285
+    },
+    {
+     "w": "credentials",
+     "at": 8.545
+    }
+   ]
+  },
+  {
+   "at": 9.285,
+   "words": [
+    {
+     "w": "to",
+     "at": 9.285
+    },
+    {
+     "w": "the",
+     "at": 9.415
+    },
+    {
+     "w": "server.",
+     "at": 10.055
+    }
+   ]
+  },
+  {
+   "at": 10.075,
+   "words": [
+    {
+     "w": "The",
+     "at": 10.075
+    },
+    {
+     "w": "server",
+     "at": 10.285
+    },
+    {
+     "w": "looks",
+     "at": 10.595
+    },
+    {
+     "w": "you",
+     "at": 10.815
+    },
+    {
+     "w": "up",
+     "at": 10.975
+    }
+   ]
+  },
+  {
+   "at": 11.075,
+   "words": [
+    {
+     "w": "in",
+     "at": 11.075
+    },
+    {
+     "w": "the",
+     "at": 11.195
+    },
+    {
+     "w": "database,",
+     "at": 11.335
+    }
+   ]
+  },
+  {
+   "at": 11.795,
+   "words": [
+    {
+     "w": "and",
+     "at": 11.795
+    },
+    {
+     "w": "checks",
+     "at": 12.005
+    },
+    {
+     "w": "your",
+     "at": 12.315
+    },
+    {
+     "w": "password",
+     "at": 12.525
+    },
+    {
+     "w": "against",
+     "at": 12.975
+    }
+   ]
+  },
+  {
+   "at": 13.375,
+   "words": [
+    {
+     "w": "a",
+     "at": 13.375
+    },
+    {
+     "w": "stored",
+     "at": 13.435
+    },
+    {
+     "w": "hash,",
+     "at": 13.765
+    }
+   ]
+  },
+  {
+   "at": 14.035,
+   "words": [
+    {
+     "w": "never",
+     "at": 14.035
+    },
+    {
+     "w": "the",
+     "at": 14.445
+    },
+    {
+     "w": "password",
+     "at": 14.755
+    },
+    {
+     "w": "itself.",
+     "at": 15.335
+    }
+   ]
+  },
+  {
+   "at": 16.095,
+   "words": [
+    {
+     "w": "If",
+     "at": 16.095
+    },
+    {
+     "w": "it",
+     "at": 16.225
+    },
+    {
+     "w": "matches,",
+     "at": 16.355
+    }
+   ]
+  },
+  {
+   "at": 16.935,
+   "words": [
+    {
+     "w": "the",
+     "at": 16.935
+    },
+    {
+     "w": "server",
+     "at": 17.125
+    },
+    {
+     "w": "creates",
+     "at": 17.515
+    },
+    {
+     "w": "a",
+     "at": 17.995
+    },
+    {
+     "w": "token,",
+     "at": 18.075
+    }
+   ]
+  },
+  {
+   "at": 18.705,
+   "words": [
+    {
+     "w": "and",
+     "at": 18.705
+    },
+    {
+     "w": "sends",
+     "at": 18.985
+    },
+    {
+     "w": "it",
+     "at": 19.025
+    },
+    {
+     "w": "back.",
+     "at": 19.165
+    }
+   ]
+  },
+  {
+   "at": 20.272,
+   "words": [
+    {
+     "w": "From",
+     "at": 20.272
+    },
+    {
+     "w": "now",
+     "at": 20.412
+    },
+    {
+     "w": "on,",
+     "at": 20.602
+    }
+   ]
+  },
+  {
+   "at": 20.722,
+   "words": [
+    {
+     "w": "your",
+     "at": 20.722
+    },
+    {
+     "w": "browser",
+     "at": 20.972
+    },
+    {
+     "w": "shows",
+     "at": 21.422
+    },
+    {
+     "w": "that",
+     "at": 21.802
+    },
+    {
+     "w": "token",
+     "at": 21.992
+    }
+   ]
+  },
+  {
+   "at": 22.362,
+   "words": [
+    {
+     "w": "with",
+     "at": 22.362
+    },
+    {
+     "w": "every",
+     "at": 22.622
+    },
+    {
+     "w": "request.",
+     "at": 22.962
+    }
+   ]
+  },
+  {
+   "at": 23.842,
+   "words": [
+    {
+     "w": "That's",
+     "at": 23.842
+    },
+    {
+     "w": "how",
+     "at": 24.152
+    },
+    {
+     "w": "the",
+     "at": 24.312
+    },
+    {
+     "w": "app",
+     "at": 24.472
+    },
+    {
+     "w": "remembers",
+     "at": 24.632
+    }
+   ]
+  },
+  {
+   "at": 25.102,
+   "words": [
+    {
+     "w": "you",
+     "at": 25.102
+    },
+    {
+     "w": "are",
+     "at": 25.262
+    },
+    {
+     "w": "you.",
+     "at": 25.482
+    }
+   ]
+  }
+ ],
+ "audio": "narration.wav"
+}

@@ -1,0 +1,168 @@
+{
+  "version": 2,
+  "title": "What happens when you click Login? (in the car, front seats)",
+  "note": "Rewritten 2026-10-09 for natural, realistic speech (same topic and order as dialogue_v1). The human sits in the FRONT passenger seat beside Claude. Voices: local Kokoro TTS (Apache-2.0, commercial use OK), creator's decision; the creator listens and picks voices.",
+  "voices": {
+    "claude": {
+      "engine": "kokoro",
+      "voice": "af_heart",
+      "speed": 1.0
+    },
+    "human": {
+      "engine": "kokoro",
+      "voice": "am_michael",
+      "speed": 1.0
+    }
+  },
+  "pronunciation": {
+    "API": "A P I",
+    "Login": "log in"
+  },
+  "gapBetweenLinesSec": 0.3,
+  "intro": [
+    {
+      "shot": "EST",
+      "camera": "CAM_EST_Street",
+      "durationSec": 4.0,
+      "action": "the human walks out of the building door and stops at the curb, texting"
+    },
+    {
+      "shot": "PHONE",
+      "camera": "CAM_PHONE_CU",
+      "durationSec": 6.0,
+      "action": "chat UI: the message is typed in the input bar, sent as a bubble, then Claude replies",
+      "phoneText": "Claude, I wanna go home.",
+      "phoneReply": "On my way! I'll be there in about two minutes."
+    },
+    {
+      "shot": "EST",
+      "camera": "CAM_EST_Street",
+      "durationSec": 4.0,
+      "action": "the yellow car pulls up to the curb; the passenger door is on his side"
+    }
+  ],
+  "lines": [
+    {
+      "id": 1,
+      "speaker": "claude",
+      "emotion": "happy",
+      "look": "at the human",
+      "text": "Hey! Hop in. Home?"
+    },
+    {
+      "id": 2,
+      "speaker": "human",
+      "emotion": "happy",
+      "look": "at Claude, buckling up",
+      "text": "Yeah, home. Thanks. Can I ask you something kind of dumb?"
+    },
+    {
+      "id": 3,
+      "speaker": "claude",
+      "emotion": "amused",
+      "look": "quick glance, back to the road",
+      "text": "Those are my favorite kind. Go for it."
+    },
+    {
+      "id": 4,
+      "speaker": "human",
+      "emotion": "curious",
+      "look": "at the road",
+      "text": "When I hit log in on a website... what actually happens?"
+    },
+    {
+      "id": 5,
+      "speaker": "claude",
+      "emotion": "excited",
+      "look": "at the road",
+      "text": "So, your browser packs up your email and your password, and sends them to the server."
+    },
+    {
+      "id": 6,
+      "speaker": "human",
+      "emotion": "surprised",
+      "look": "at Claude",
+      "text": "Wait. It just sends my password? Like, the actual password?"
+    },
+    {
+      "id": 7,
+      "speaker": "claude",
+      "emotion": "thoughtful",
+      "look": "at the road",
+      "text": "It does, but over an encrypted connection. And a good server never keeps it. It only stores a scrambled version. A hash."
+    },
+    {
+      "id": 8,
+      "speaker": "human",
+      "emotion": "curious",
+      "look": "out of the right window, then Claude",
+      "text": "Okay... so how does it know it's me?"
+    },
+    {
+      "id": 9,
+      "speaker": "claude",
+      "emotion": "proud",
+      "look": "at the road, glance at him at the end",
+      "text": "It scrambles what you just typed the same way, and compares the two. If they match, you're in."
+    },
+    {
+      "id": 10,
+      "speaker": "human",
+      "emotion": "curious",
+      "look": "at Claude",
+      "text": "Okay. And then what?"
+    },
+    {
+      "id": 11,
+      "speaker": "claude",
+      "emotion": "happy",
+      "look": "at him",
+      "text": "Then it hands you a token. Kind of like a wristband at a concert. You show it with every request, so you don't have to log in again each time."
+    },
+    {
+      "id": 12,
+      "speaker": "human",
+      "emotion": "amused",
+      "look": "out of the right window",
+      "text": "Huh. So being logged in is basically just... wearing the wristband."
+    },
+    {
+      "id": 13,
+      "speaker": "claude",
+      "emotion": "happy",
+      "look": "at him, then the road",
+      "text": "Exactly. Until it expires. Anyway, we're almost at your place."
+    },
+    {
+      "id": 14,
+      "speaker": "human",
+      "emotion": "happy",
+      "look": "at Claude",
+      "text": "That was weirdly helpful. Thanks, Claude."
+    }
+  ],
+  "cutRule": "interior: while CLAUDE speaks use CAM_HUMAN_POV (from the passenger seat: Claude's face and the road), while the HUMAN speaks use CAM_CLAUDE_POV (from the driver side: the human's face, the right window behind him); optional CAM_INT_TwoShot for reactions; cut on the first word, hold at least 1.2 s; the 0.35 s gap stays on the previous shot. No rear-view mirror shots any more.",
+  "emotionsAllowed": [
+    "neutral",
+    "happy",
+    "curious",
+    "excited",
+    "surprised",
+    "thoughtful",
+    "proud",
+    "amused"
+  ],
+  "voiceCandidates": {
+    "claude": [
+      "af_heart",
+      "bf_emma",
+      "af_bella"
+    ],
+    "human": [
+      "am_michael",
+      "am_fenrir",
+      "am_puck",
+      "bm_george"
+    ]
+  }
+}

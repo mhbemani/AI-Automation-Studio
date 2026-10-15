@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "title": "What happens when you click Login? (in the car)",
+  "note": "Sample content, made up for the first end-to-end test. Characters, car and voices are placeholders.",
+  "voices": {
+    "claude": { "engine": "kokoro", "voice": "bf_emma", "speed": 0.95 },
+    "human":  { "engine": "kokoro", "voice": "am_michael", "speed": 0.95 }
+  },
+  "pronunciation": { "API": "A P I", "Login": "log in" },
+  "gapBetweenLinesSec": 0.35,
+  "intro": [
+    { "shot": "EST", "camera": "CAM_EST_Street", "durationSec": 4.0, "action": "human walks out of the building door and stops at the curb" },
+    { "shot": "PHONE", "camera": "CAM_PHONE_CU", "durationSec": 3.5, "action": "message typed on the phone screen", "phoneText": "Claude, I wanna go home." },
+    { "shot": "EST", "camera": "CAM_EST_Street", "durationSec": 4.0, "action": "the car pulls up to the curb and stops in front of the human" }
+  ],
+  "lines": [
+    { "id": 1,  "speaker": "claude", "emotion": "happy",     "text": "Hop in. Home, right?" },
+    { "id": 2,  "speaker": "human",  "emotion": "curious",   "text": "Yeah. Hey, quick question while we drive. What actually happens when I click Login?" },
+    { "id": 3,  "speaker": "claude", "emotion": "excited",   "text": "Ooh, good one. Picture your browser handing a note to the server. Your email, and your password." },
+    { "id": 4,  "speaker": "human",  "emotion": "surprised", "text": "Wait, it just sends my password?" },
+    { "id": 5,  "speaker": "claude", "emotion": "thoughtful","text": "Over an encrypted connection, yes. And the server never stores it. Only a scrambled fingerprint, called a hash." },
+    { "id": 6,  "speaker": "human",  "emotion": "curious",   "text": "So how does it check it's me?" },
+    { "id": 7,  "speaker": "claude", "emotion": "proud",     "text": "It scrambles what you typed and compares the fingerprints. A match, and you're in. Then it hands you a token, like a signed pass." },
+    { "id": 8,  "speaker": "human",  "emotion": "curious",   "text": "And I just show that pass every time?" },
+    { "id": 9,  "speaker": "claude", "emotion": "happy",     "text": "Every request. That's all being logged in is. Proof you keep showing." },
+    { "id": 10, "speaker": "human",  "emotion": "amused",    "text": "Huh. That's actually simple." },
+    { "id": 11, "speaker": "claude", "emotion": "happy",     "text": "Most things are, once you see them move. Next stop: home." }
+  ],
+  "cutRule": "interior: while CLAUDE speaks use CAM_HUMAN_POV (we see Claude), while the HUMAN speaks use CAM_CLAUDE_POV (we see the human in the mirror); cut on the first word, hold at least 1.2 s; the 0.35 s gap stays on the previous shot",
+  "emotionsAllowed": ["neutral", "happy", "curious", "excited", "surprised", "thoughtful", "proud", "amused"]
+}

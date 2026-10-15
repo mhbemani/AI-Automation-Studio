@@ -1,0 +1,28 @@
+{
+ "target": -14,
+ "voiceLUFS": -20.3,
+ "bedLUFS": -22,
+ "bedGainDb": -20.3,
+ "files": {
+  "final.mp4": {
+   "I": -14.1,
+   "LRA": 1.9,
+   "TP": -1
+  },
+  "final_vertical.mp4": {
+   "I": -14.1,
+   "LRA": 1.9,
+   "TP": -1
+  },
+  "final_nobed.mp4": {
+   "I": -14.1,
+   "LRA": 1.9,
+   "TP": -0.9
+  },
+  "final_vertical_nobed.mp4": {
+   "I": -14.1,
+   "LRA": 1.9,
+   "TP": -0.9
+  }
+ }
+}

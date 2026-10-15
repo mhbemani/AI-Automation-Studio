@@ -1,0 +1,70 @@
+{
+ "walk_cycle": {
+  "foot_drift_cm_in_stance": {
+   "L": 0.008,
+   "R": 0.007
+  },
+  "min_ankle_z": 0.076,
+  "max_ankle_z": 0.195,
+  "leg_length_range": [
+   0.679,
+   0.805
+  ],
+  "loop_max_diff_channels": 0.0,
+  "ankle_y_loop_diff_m": 0.0,
+  "range": [
+   1.0,
+   25.0
+  ],
+  "symmetry_in_stance": {
+   "L": {
+    "ankle_out_from_centre_m": 0.119,
+    "toe_out_deg": 6.0
+   },
+   "R": {
+    "ankle_out_from_centre_m": 0.12,
+    "toe_out_deg": 6.0
+   }
+  }
+ },
+ "walk_out_building": {
+  "foot_drift_cm_in_stance": 0.007,
+  "range": [
+   1.0,
+   72.0
+  ]
+ },
+ "HUM_stand_idle": {
+  "range": [
+   1,
+   97
+  ],
+  "length_ok": true,
+  "loop_max_diff": 0.0
+ },
+ "HUM_stand_to_walk": {
+  "range": [
+   1,
+   12
+  ],
+  "length_ok": true
+ },
+ "HUM_walk_to_stand": {
+  "range": [
+   1,
+   12
+  ],
+  "length_ok": true
+ },
+ "HUM_stop_from_walk": {
+  "range": [
+   1,
+   18
+  ],
+  "length_ok": true
+ },
+ "blend_match": {
+  "walk f1 vs stand_to_walk f12": 0.0,
+  "walk f1 vs walk_to_stand f1": 0.0
+ }
+}

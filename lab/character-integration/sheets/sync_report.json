@@ -1,0 +1,188 @@
+{
+ "words_final_mp4": {
+  "n": 126,
+  "mean_ms": 163.5,
+  "p95_ms": 400.0,
+  "max_ms": 730.0,
+  "matched": "126/126",
+  "signed_mean_ms": 46.3
+ },
+ "words_narration_wav": {
+  "n": 126,
+  "mean_ms": 168.2,
+  "p95_ms": 390.0,
+  "max_ms": 750.0,
+  "matched": "126/126",
+  "signed_mean_ms": 68.8
+ },
+ "packets": {
+  "n": 6,
+  "mean_ms": 122.2,
+  "p95_ms": 166.7,
+  "max_ms": 200.0,
+  "of": 6,
+  "signed_mean_ms": -11.1,
+  "detail": [
+   {
+    "label": "POST /login",
+    "intended": 8.147,
+    "observed": 8.247,
+    "drift_ms": 100.0
+   },
+   {
+    "label": "find user",
+    "intended": 13.477,
+    "observed": 13.61,
+    "drift_ms": 133.3
+   },
+   {
+    "label": "stored hash",
+    "intended": 16.787,
+    "observed": 16.753,
+    "drift_ms": -33.3
+   },
+   {
+    "label": "token",
+    "intended": 25.11,
+    "observed": 25.21,
+    "drift_ms": 100.0
+   },
+   {
+    "label": "GET /profile + token",
+    "intended": 27.41,
+    "observed": 27.243,
+    "drift_ms": -166.7
+   },
+   {
+    "label": "200 OK",
+    "intended": 29.96,
+    "observed": 29.76,
+    "drift_ms": -200.0
+   }
+  ]
+ },
+ "character_events": {
+  "n": 12,
+  "mean_ms": 66.6,
+  "p95_ms": 133.3,
+  "max_ms": 166.7,
+  "events": 19,
+  "no_onset_found": 7,
+  "signed_mean_ms": 66.6,
+  "detail": [
+   {
+    "action": "wave",
+    "t": 1,
+    "onset_lag_ms": null
+   },
+   {
+    "action": "think",
+    "t": 1.6,
+    "onset_lag_ms": null
+   },
+   {
+    "action": "talk",
+    "t": 3.2,
+    "onset_lag_ms": 33.3
+   },
+   {
+    "action": "talk",
+    "t": 7.066666666666666,
+    "onset_lag_ms": null
+   },
+   {
+    "action": "point_right",
+    "t": 8.133333333333333,
+    "onset_lag_ms": 33.3
+   },
+   {
+    "action": "talk",
+    "t": 10.766666666666667,
+    "onset_lag_ms": 33.3
+   },
+   {
+    "action": "talk",
+    "t": 12.766666666666667,
+    "onset_lag_ms": null
+   },
+   {
+    "action": "point_right",
+    "t": 13.466666666666667,
+    "onset_lag_ms": 133.3
+   },
+   {
+    "action": "think",
+    "t": 17.3,
+    "onset_lag_ms": 166.7
+   },
+   {
+    "action": "talk",
+    "t": 19.133333333333333,
+    "onset_lag_ms": 33.3
+   },
+   {
+    "action": "talk",
+    "t": 21.5,
+    "onset_lag_ms": null
+   },
+   {
+    "action": "point_right",
+    "t": 25.1,
+    "onset_lag_ms": 100.0
+   },
+   {
+    "action": "talk",
+    "t": 27.4,
+    "onset_lag_ms": null
+   },
+   {
+    "action": "point_right",
+    "t": 29.5,
+    "onset_lag_ms": 133.3
+   },
+   {
+    "action": "talk",
+    "t": 31.066666666666666,
+    "onset_lag_ms": null
+   },
+   {
+    "action": "think",
+    "t": 34.1,
+    "onset_lag_ms": 33.3
+   },
+   {
+    "action": "talk",
+    "t": 34.96666666666667,
+    "onset_lag_ms": 33.3
+   },
+   {
+    "action": "talk",
+    "t": 36.46666666666667,
+    "onset_lag_ms": 33.3
+   },
+   {
+    "action": "celebrate",
+    "t": 40.13333333333333,
+    "onset_lag_ms": 33.3
+   }
+  ]
+ },
+ "mouth_vs_narration": {
+  "best_lag_frames": 0,
+  "best_lag_ms": 0.0,
+  "corr_at_lags": {
+   "-3": 0.5,
+   "-2": 0.583,
+   "-1": 0.68,
+   "0": 0.742,
+   "1": 0.702,
+   "2": 0.609,
+   "3": 0.515
+  }
+ },
+ "video": {
+  "durationSec": 42.233333333333334,
+  "frames_in_clip": 1267,
+  "expected_frames": 1267
+ }
+}

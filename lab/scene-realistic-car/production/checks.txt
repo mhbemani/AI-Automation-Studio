@@ -1,0 +1,80 @@
+PASS out/audio_mix.wav: 71.7917 s vs timeline 71.7917 s (<= 1 frame)
+PASS out/audio_voices_only.wav: 71.7917 s vs timeline 71.7917 s (<= 1 frame)
+PASS shots tile [1, 1724) with no gaps or overlaps
+PASS every shot holds >= 29 frames (1.2 s)
+PASS line 1 lies inside exactly one shot (['S04'])
+PASS line 1 words ordered and inside the line
+PASS line 2 lies inside exactly one shot (['S05'])
+PASS line 2 words ordered and inside the line
+PASS line 3 lies inside exactly one shot (['S06'])
+PASS line 3 words ordered and inside the line
+PASS line 4 lies inside exactly one shot (['S07'])
+PASS line 4 words ordered and inside the line
+PASS line 5 lies inside exactly one shot (['S08'])
+PASS line 5 words ordered and inside the line
+PASS line 6 lies inside exactly one shot (['S09'])
+PASS line 6 words ordered and inside the line
+PASS line 7 lies inside exactly one shot (['S10'])
+PASS line 7 words ordered and inside the line
+PASS line 8 lies inside exactly one shot (['S11'])
+PASS line 8 words ordered and inside the line
+PASS line 9 lies inside exactly one shot (['S12'])
+PASS line 9 words ordered and inside the line
+PASS line 10 lies inside exactly one shot (['S13'])
+PASS line 10 words ordered and inside the line
+PASS line 11 lies inside exactly one shot (['S14'])
+PASS line 11 words ordered and inside the line
+PASS line 12 lies inside exactly one shot (['S15'])
+PASS line 12 words ordered and inside the line
+PASS line 13 lies inside exactly one shot (['S16'])
+PASS line 13 words ordered and inside the line
+PASS line 14 lies inside exactly one shot (['S17'])
+PASS line 14 words ordered and inside the line
+PASS lines do not overlap
+PASS envelope_claude.json: 1723 values in 0..1 (video 1723 frames)
+PASS envelope_human.json: 1723 values in 0..1 (video 1723 frames)
+PASS all emotion names in emotionsAllowed
+PASS emotion key frames inside the video
+PASS motion cues in order
+PASS phone typing and send inside the phone shot
+PASS out/audio_mix.wav: -13.9 LUFS (target -14.0 +/- 0.3), true peak -1.5 dBTP (<= -1.0)
+PASS out/audio_voices_only.wav: -14.0 LUFS (target -14.0 +/- 0.3), true peak -1.5 dBTP (<= -1.0)
+
+line who     start s   end s  dur s words  wpm  shot  emotion
+   1 claude    14.50   15.62   1.12     4  213  S04   happy
+   2 human     15.92   19.29   3.38    11  196  S05   happy
+   3 claude    19.58   22.04   2.46     8  195  S06   amused
+   4 human     22.33   25.75   3.42    11  193  S07   curious
+   5 claude    26.04   30.62   4.58    16  209  S08   excited
+   6 human     30.92   34.54   3.62    10  166  S09   surprised
+   7 claude    34.83   42.08   7.25    22  182  S10   thoughtful
+   8 human     42.38   44.29   1.92     8  250  S11   curious
+   9 claude    44.58   49.54   4.96    18  218  S12   proud
+  10 human     49.83   51.08   1.25     4  192  S13   curious
+  11 claude    51.38   59.46   8.08    30  223  S14   happy
+  12 human     59.75   63.71   3.96    11  167  S15   amused
+  13 claude    64.00   68.04   4.04    10  148  S16   happy
+  14 human     68.33   70.79   2.46     6  146  S17   happy
+
+total: 1723 frames = 71.79 s (24 fps); speech 52.50 s, 169 words, 193 wpm while speaking
+
+cut list (frames [start, end), seconds):
+  S01 EST   CAM_EST_Street      1-97      0.00-  4.00  (4.00 s)
+  S02 PHONE CAM_PHONE_CU       97-241     4.00- 10.00  (6.00 s)
+  S03 EST   CAM_EST_Street    241-337    10.00- 14.00  (4.00 s)
+  S04 INT   CAM_HUMAN_POV     337-383    14.00- 15.92  (1.92 s)
+  S05 INT   CAM_CLAUDE_POV    383-471    15.92- 19.58  (3.67 s)
+  S06 INT   CAM_HUMAN_POV     471-537    19.58- 22.33  (2.75 s)
+  S07 INT   CAM_CLAUDE_POV    537-626    22.33- 26.04  (3.71 s)
+  S08 INT   CAM_HUMAN_POV     626-743    26.04- 30.92  (4.88 s)
+  S09 INT   CAM_CLAUDE_POV    743-837    30.92- 34.83  (3.92 s)
+  S10 INT   CAM_HUMAN_POV     837-1018   34.83- 42.38  (7.54 s)
+  S11 INT   CAM_CLAUDE_POV   1018-1071   42.38- 44.58  (2.21 s)
+  S12 INT   CAM_HUMAN_POV    1071-1197   44.58- 49.83  (5.25 s)
+  S13 INT   CAM_CLAUDE_POV   1197-1234   49.83- 51.38  (1.54 s)
+  S14 INT   CAM_HUMAN_POV    1234-1435   51.38- 59.75  (8.38 s)
+  S15 INT   CAM_CLAUDE_POV   1435-1537   59.75- 64.00  (4.25 s)
+  S16 INT   CAM_HUMAN_POV    1537-1641   64.00- 68.33  (4.33 s)
+  S17 INT   CAM_CLAUDE_POV   1641-1724   68.33- 71.79  (3.46 s)
+
+ALL CHECKS PASSED

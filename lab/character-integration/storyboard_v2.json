@@ -1,0 +1,73 @@
+{
+  "version": 2,
+  "topic": "What happens when you click Login?",
+  "series": "How Software Actually Works",
+  "voice": { "engine": "kokoro", "main": "bf_emma", "alt": "af_heart", "speed": 0.95 },
+  "targetSeconds": 45,
+  "bed": "generated",
+  "scenes": [
+    {
+      "id": 1,
+      "layout": "presenter_center_typography",
+      "narration": "You click Login. Nothing seems to happen. But in under a second, five different systems just talked about you.",
+      "onScreen": [{ "text": "You click Login.", "cue": "You" }, { "text": "5 systems. Under 1 second.", "cue": "under" }],
+      "character": [{ "at": 0.0, "action": "wave" }, { "cue": "Nothing", "action": "think" }, { "cue": "But", "action": "talk" }]
+    },
+    {
+      "id": 2,
+      "layout": "presenter_left_diagram_right",
+      "narration": "First, your browser sends your email and password to the server, over an encrypted connection.",
+      "nodes": ["Browser", "API", "Database"],
+      "packets": [{ "from": "Browser", "to": "API", "label": "POST /login", "cue": "sends" }],
+      "focus": [{ "node": "Browser", "cue": "browser" }, { "node": "API", "cue": "server" }],
+      "character": [{ "at": 0.0, "action": "talk" }, { "cue": "sends", "action": "point_right" }, { "cue": "over", "action": "talk" }]
+    },
+    {
+      "id": 3,
+      "layout": "presenter_left_diagram_right",
+      "narration": "The server looks you up in the database. It never keeps your password, only a hash, a scrambled fingerprint. So it hashes what you typed, and compares.",
+      "nodes": ["Browser", "API", "Database"],
+      "packets": [
+        { "from": "API", "to": "Database", "label": "find user", "cue": "looks" },
+        { "from": "Database", "to": "API", "label": "stored hash", "cue": "hash" }
+      ],
+      "focus": [
+        { "node": "API", "cue": "server" },
+        { "node": "Database", "cue": "database" },
+        { "node": "API", "cue": "compares", "label": "hashes match ✓" }
+      ],
+      "character": [{ "at": 0.0, "action": "talk" }, { "cue": "looks", "action": "point_right" }, { "cue": "scrambled", "action": "think" }, { "cue": "hashes", "action": "talk" }]
+    },
+    {
+      "id": 4,
+      "layout": "presenter_corner_diagram_full",
+      "narration": "If they match, the server creates a token, a signed pass, and sends it back. Your browser then shows it with every request, and the server checks the signature.",
+      "nodes": ["Browser", "API", "Database"],
+      "packets": [
+        { "from": "API", "to": "Browser", "label": "token", "cue": "sends" },
+        { "from": "Browser", "to": "API", "label": "GET /profile + token", "cue": "shows" },
+        { "from": "API", "to": "Browser", "label": "200 OK", "cue": "signature" }
+      ],
+      "focus": [
+        { "node": "API", "cue": "creates", "label": "signs a token" },
+        { "node": "API", "cue": "checks", "label": "verifies signature ✓" }
+      ],
+      "character": [{ "at": 0.0, "action": "talk" }, { "cue": "sends", "action": "point_right" }, { "cue": "shows", "action": "talk" }, { "cue": "checks", "action": "point_right" }]
+    },
+    {
+      "id": 5,
+      "layout": "presenter_center_typography",
+      "narration": "A session is a note the server keeps about you. A token is a pass you carry yourself.",
+      "onScreen": [{ "text": "Session: the server remembers you", "cue": "session" }, { "text": "Token: you carry the proof", "cue": "token" }],
+      "character": [{ "at": 0.0, "action": "talk" }, { "cue": "token", "action": "think" }, { "cue": "carry", "action": "talk" }]
+    },
+    {
+      "id": 6,
+      "layout": "presenter_center_typography",
+      "narration": "So being logged in isn't a state. It's proof you keep showing. That's how the app remembers you.",
+      "onScreen": [{ "text": "Logged in isn't a state.", "cue": "So" }, { "text": "It's proof you keep showing.", "cue": "proof" }],
+      "character": [{ "at": 0.0, "action": "talk" }, { "cue": "That's", "action": "celebrate" }]
+    }
+  ],
+  "pronunciation": { "API": "A P I", "JWT": "jay double-u tee", "PostgreSQL": "post-gress Q L" }
+}

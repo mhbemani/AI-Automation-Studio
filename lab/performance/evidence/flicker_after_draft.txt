@@ -1,0 +1,4 @@
+NEW 3 timeline PNG seq (alpha)     frames 1266  d1 mean 1.388 median 0.930 max 9.07 | rough 0.18 dups 2 | spikes 1 520(x2.6)
+NEW 3 timeline PNG seq (luma)      frames 1266  d1 mean 1.430 median 1.042 max 9.13 | rough 0.17 dups 1 | spikes 1 520(x2.5)
+NEW 6 final.mp4 char region s2-3   frames  411  d1 mean 2.009 median 1.484 max 10.27 | rough 0.17 dups 0 | spikes 0 
+OLD 6 final.mp4 char region s2-3   frames  411  d1 mean 4.170 median 2.957 max 16.93 | rough 0.46 dups 5 | spikes 17 218(x3.5), 234(x4.0), 240(x3.6), 245(x2.8), 326(x2.7), 361(x2.9), 391(x3.3), 423(x3.0), 441(x3.2), 446(x2.9), 450(x2.9), 470(x3.1)

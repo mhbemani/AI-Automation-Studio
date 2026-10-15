@@ -1,0 +1,629 @@
+{
+ "aspect": "9:16",
+ "frameWidth": 1080,
+ "rows": [
+  {
+   "scene": 1,
+   "gesture": "point_at",
+   "where": "apex",
+   "frame": 128,
+   "target": "text:1",
+   "hand": "R",
+   "target_px": [
+    540,
+    734.8
+   ],
+   "tip_px": [
+    604.8,
+    1477.2
+   ],
+   "finger_ray_miss_px": 6.6,
+   "finger_angle_deg": 0.4,
+   "arm_ray_miss_px": 6.9,
+   "gaze_angle_deg": 14.0,
+   "strict": true,
+   "reduced": false
+  },
+  {
+   "scene": 2,
+   "gesture": "present",
+   "where": "apex",
+   "frame": 200,
+   "target": "diagram",
+   "hand": "R",
+   "target_px": [
+    540,
+    530.3
+   ],
+   "tip_px": [
+    630.7,
+    1486.8
+   ],
+   "finger_ray_miss_px": 12.9,
+   "finger_angle_deg": 0.7,
+   "arm_ray_miss_px": 7.0,
+   "gaze_angle_deg": 3.2,
+   "strict": false,
+   "reduced": true
+  },
+  {
+   "scene": 2,
+   "gesture": "point_at",
+   "where": "apex",
+   "frame": 232,
+   "target": "node:Browser",
+   "hand": "L",
+   "target_px": [
+    540,
+    225.2
+   ],
+   "tip_px": [
+    422.4,
+    1457.9
+   ],
+   "finger_ray_miss_px": 1.5,
+   "finger_angle_deg": 0.1,
+   "arm_ray_miss_px": 1.5,
+   "gaze_angle_deg": 6.2,
+   "strict": true,
+   "reduced": false
+  },
+  {
+   "scene": 2,
+   "gesture": "track",
+   "where": "apex",
+   "frame": 244,
+   "target": "packet:0",
+   "hand": "R",
+   "target_px": [
+    540,
+    351.2
+   ],
+   "tip_px": [
+    641.4,
+    1456.9
+   ],
+   "finger_ray_miss_px": 8.3,
+   "finger_angle_deg": 0.4,
+   "arm_ray_miss_px": 8.2,
+   "gaze_angle_deg": 3.0,
+   "strict": true,
+   "reduced": true
+  },
+  {
+   "scene": 2,
+   "gesture": "track",
+   "where": "mid",
+   "frame": 292,
+   "target": "packet:0",
+   "hand": "R",
+   "target_px": [
+    540,
+    390
+   ],
+   "tip_px": [
+    644.8,
+    1477.5
+   ],
+   "finger_ray_miss_px": 1.7,
+   "finger_angle_deg": 0.1,
+   "arm_ray_miss_px": 1.7,
+   "gaze_angle_deg": 1.4,
+   "strict": true,
+   "reduced": true
+  },
+  {
+   "scene": 2,
+   "gesture": "point_at",
+   "where": "apex",
+   "frame": 304,
+   "target": "node:API",
+   "hand": "L",
+   "target_px": [
+    540,
+    556.8
+   ],
+   "tip_px": [
+    428.4,
+    1465.5
+   ],
+   "finger_ray_miss_px": 1.6,
+   "finger_angle_deg": 0.1,
+   "arm_ray_miss_px": 1.6,
+   "gaze_angle_deg": 1.0,
+   "strict": true,
+   "reduced": false
+  },
+  {
+   "scene": 3,
+   "gesture": "point_at",
+   "where": "apex",
+   "frame": 390,
+   "target": "node:API",
+   "hand": "L",
+   "target_px": [
+    540,
+    556.8
+   ],
+   "tip_px": [
+    432.0,
+    1452.2
+   ],
+   "finger_ray_miss_px": 1.2,
+   "finger_angle_deg": 0.1,
+   "arm_ray_miss_px": 1.2,
+   "gaze_angle_deg": 4.2,
+   "strict": true,
+   "reduced": false
+  },
+  {
+   "scene": 3,
+   "gesture": "track",
+   "where": "apex",
+   "frame": 404,
+   "target": "packet:0",
+   "hand": "R",
+   "target_px": [
+    540,
+    682.8
+   ],
+   "tip_px": [
+    635.2,
+    1458.9
+   ],
+   "finger_ray_miss_px": 3.5,
+   "finger_angle_deg": 0.2,
+   "arm_ray_miss_px": 3.5,
+   "gaze_angle_deg": 3.8,
+   "strict": true,
+   "reduced": true
+  },
+  {
+   "scene": 3,
+   "gesture": "track",
+   "where": "mid",
+   "frame": 452,
+   "target": "packet:0",
+   "hand": "R",
+   "target_px": [
+    540,
+    721.9
+   ],
+   "tip_px": [
+    637.9,
+    1478.6
+   ],
+   "finger_ray_miss_px": 1.6,
+   "finger_angle_deg": 0.1,
+   "arm_ray_miss_px": 1.6,
+   "gaze_angle_deg": 5.8,
+   "strict": true,
+   "reduced": true
+  },
+  {
+   "scene": 3,
+   "gesture": "point_at",
+   "where": "apex",
+   "frame": 434,
+   "target": "node:Database",
+   "hand": "L",
+   "target_px": [
+    540,
+    888.4
+   ],
+   "tip_px": [
+    434.7,
+    1471.0
+   ],
+   "finger_ray_miss_px": 2.9,
+   "finger_angle_deg": 0.2,
+   "arm_ray_miss_px": 2.9,
+   "gaze_angle_deg": 4.5,
+   "strict": true,
+   "reduced": false
+  },
+  {
+   "scene": 3,
+   "gesture": "track",
+   "where": "apex",
+   "frame": 504,
+   "target": "packet:1",
+   "hand": "R",
+   "target_px": [
+    540,
+    762.4
+   ],
+   "tip_px": [
+    637.2,
+    1472.6
+   ],
+   "finger_ray_miss_px": 0.8,
+   "finger_angle_deg": 0.1,
+   "arm_ray_miss_px": 0.8,
+   "gaze_angle_deg": 0.9,
+   "strict": true,
+   "reduced": false
+  },
+  {
+   "scene": 3,
+   "gesture": "track",
+   "where": "mid",
+   "frame": 552,
+   "target": "packet:1",
+   "hand": "R",
+   "target_px": [
+    540,
+    721.6
+   ],
+   "tip_px": [
+    636.7,
+    1467.6
+   ],
+   "finger_ray_miss_px": 2.1,
+   "finger_angle_deg": 0.1,
+   "arm_ray_miss_px": 2.1,
+   "gaze_angle_deg": 15.3,
+   "strict": true,
+   "reduced": false
+  },
+  {
+   "scene": 3,
+   "gesture": "point_at",
+   "where": "apex",
+   "frame": 574,
+   "target": "node:API",
+   "hand": "L",
+   "target_px": [
+    540,
+    556.8
+   ],
+   "tip_px": [
+    427.1,
+    1458.3
+   ],
+   "finger_ray_miss_px": 0.8,
+   "finger_angle_deg": 0.0,
+   "arm_ray_miss_px": 0.8,
+   "gaze_angle_deg": 10.4,
+   "strict": true,
+   "reduced": false
+  },
+  {
+   "scene": 4,
+   "gesture": "point_at",
+   "where": "apex",
+   "frame": 688,
+   "target": "node:API",
+   "hand": "R",
+   "target_px": [
+    540,
+    556.8
+   ],
+   "tip_px": [
+    628.1,
+    1504.4
+   ],
+   "finger_ray_miss_px": 15.8,
+   "finger_angle_deg": 0.9,
+   "arm_ray_miss_px": 15.8,
+   "gaze_angle_deg": 1.6,
+   "strict": true,
+   "reduced": false
+  },
+  {
+   "scene": 4,
+   "gesture": "offer",
+   "where": "apex",
+   "frame": 706,
+   "target": "node:API",
+   "hand": "L",
+   "target_px": [
+    540,
+    556.8
+   ],
+   "tip_px": [
+    442.3,
+    1491.1
+   ],
+   "finger_ray_miss_px": 54.6,
+   "finger_angle_deg": 3.0,
+   "arm_ray_miss_px": 32.4,
+   "gaze_angle_deg": 12.2,
+   "strict": false,
+   "reduced": true
+  },
+  {
+   "scene": 4,
+   "gesture": "track",
+   "where": "apex",
+   "frame": 753,
+   "target": "packet:0",
+   "hand": "R",
+   "target_px": [
+    540,
+    430.8
+   ],
+   "tip_px": [
+    631.3,
+    1496.9
+   ],
+   "finger_ray_miss_px": 7.3,
+   "finger_angle_deg": 0.4,
+   "arm_ray_miss_px": 7.3,
+   "gaze_angle_deg": 1.8,
+   "strict": true,
+   "reduced": false
+  },
+  {
+   "scene": 4,
+   "gesture": "track",
+   "where": "mid",
+   "frame": 787,
+   "target": "packet:0",
+   "hand": "R",
+   "target_px": [
+    540,
+    391.2
+   ],
+   "tip_px": [
+    633.1,
+    1494.0
+   ],
+   "finger_ray_miss_px": 1.4,
+   "finger_angle_deg": 0.1,
+   "arm_ray_miss_px": 1.4,
+   "gaze_angle_deg": 10.2,
+   "strict": true,
+   "reduced": false
+  },
+  {
+   "scene": 4,
+   "gesture": "point_at",
+   "where": "apex",
+   "frame": 801,
+   "target": "node:Browser",
+   "hand": "L",
+   "target_px": [
+    540,
+    225.2
+   ],
+   "tip_px": [
+    450.1,
+    1475.7
+   ],
+   "finger_ray_miss_px": 1.7,
+   "finger_angle_deg": 0.1,
+   "arm_ray_miss_px": 1.7,
+   "gaze_angle_deg": 9.2,
+   "strict": true,
+   "reduced": false
+  },
+  {
+   "scene": 4,
+   "gesture": "track",
+   "where": "apex",
+   "frame": 822,
+   "target": "packet:1",
+   "hand": "R",
+   "target_px": [
+    540,
+    351.2
+   ],
+   "tip_px": [
+    624.6,
+    1497.7
+   ],
+   "finger_ray_miss_px": 0.2,
+   "finger_angle_deg": 0.0,
+   "arm_ray_miss_px": 0.2,
+   "gaze_angle_deg": 8.8,
+   "strict": true,
+   "reduced": true
+  },
+  {
+   "scene": 4,
+   "gesture": "track",
+   "where": "mid",
+   "frame": 860,
+   "target": "packet:1",
+   "hand": "R",
+   "target_px": [
+    540,
+    391.6
+   ],
+   "tip_px": [
+    626.7,
+    1502.7
+   ],
+   "finger_ray_miss_px": 1.5,
+   "finger_angle_deg": 0.1,
+   "arm_ray_miss_px": 1.5,
+   "gaze_angle_deg": 10.7,
+   "strict": true,
+   "reduced": true
+  },
+  {
+   "scene": 4,
+   "gesture": "point_at",
+   "where": "apex",
+   "frame": 885,
+   "target": "node:API",
+   "hand": "R",
+   "target_px": [
+    540,
+    556.8
+   ],
+   "tip_px": [
+    621.6,
+    1484.3
+   ],
+   "finger_ray_miss_px": 1.1,
+   "finger_angle_deg": 0.1,
+   "arm_ray_miss_px": 1.1,
+   "gaze_angle_deg": 13.6,
+   "strict": true,
+   "reduced": false
+  },
+  {
+   "scene": 4,
+   "gesture": "track",
+   "where": "apex",
+   "frame": 899,
+   "target": "packet:2",
+   "hand": "L",
+   "target_px": [
+    540,
+    430.8
+   ],
+   "tip_px": [
+    452.9,
+    1487.4
+   ],
+   "finger_ray_miss_px": 0.1,
+   "finger_angle_deg": 0.0,
+   "arm_ray_miss_px": 0.1,
+   "gaze_angle_deg": 14.7,
+   "strict": true,
+   "reduced": true
+  },
+  {
+   "scene": 4,
+   "gesture": "track",
+   "where": "mid",
+   "frame": 912,
+   "target": "packet:2",
+   "hand": "L",
+   "target_px": [
+    540,
+    393.6
+   ],
+   "tip_px": [
+    441.0,
+    1493.3
+   ],
+   "finger_ray_miss_px": 0.6,
+   "finger_angle_deg": 0.0,
+   "arm_ray_miss_px": 0.6,
+   "gaze_angle_deg": 9.4,
+   "strict": true,
+   "reduced": true
+  },
+  {
+   "scene": 5,
+   "gesture": "point_at",
+   "where": "apex",
+   "frame": 934,
+   "target": "text:0",
+   "hand": "R",
+   "target_px": [
+    540,
+    594.8
+   ],
+   "tip_px": [
+    635.5,
+    1479.8
+   ],
+   "finger_ray_miss_px": 1.9,
+   "finger_angle_deg": 0.1,
+   "arm_ray_miss_px": 1.9,
+   "gaze_angle_deg": 7.3,
+   "strict": true,
+   "reduced": false
+  },
+  {
+   "scene": 5,
+   "gesture": "hold_palm",
+   "where": "apex",
+   "frame": 956,
+   "target": "text:0",
+   "hand": "L",
+   "target_px": [
+    540,
+    594.8
+   ],
+   "tip_px": [
+    431.7,
+    1494.8
+   ],
+   "finger_ray_miss_px": 88.5,
+   "finger_angle_deg": 5.1,
+   "arm_ray_miss_px": 53.0,
+   "gaze_angle_deg": 5.9,
+   "strict": false,
+   "reduced": true
+  },
+  {
+   "scene": 5,
+   "gesture": "grip",
+   "where": "apex",
+   "frame": 985,
+   "target": "text:0",
+   "hand": "R",
+   "target_px": [
+    540,
+    594.8
+   ],
+   "tip_px": [
+    638.6,
+    1501.7
+   ],
+   "finger_ray_miss_px": 59.6,
+   "finger_angle_deg": 3.4,
+   "arm_ray_miss_px": 35.1,
+   "gaze_angle_deg": 2.3,
+   "strict": false,
+   "reduced": false
+  },
+  {
+   "scene": 5,
+   "gesture": "point_at",
+   "where": "apex",
+   "frame": 1023,
+   "target": "text:1",
+   "hand": "L",
+   "target_px": [
+    540,
+    787.2
+   ],
+   "tip_px": [
+    447.8,
+    1475.6
+   ],
+   "finger_ray_miss_px": 0.5,
+   "finger_angle_deg": 0.0,
+   "arm_ray_miss_px": 0.5,
+   "gaze_angle_deg": 3.9,
+   "strict": true,
+   "reduced": false
+  },
+  {
+   "scene": 6,
+   "gesture": "point_at",
+   "where": "apex",
+   "frame": 1158,
+   "target": "text:1",
+   "hand": "R",
+   "target_px": [
+    540,
+    787.2
+   ],
+   "tip_px": [
+    626.6,
+    1487.1
+   ],
+   "finger_ray_miss_px": 1.9,
+   "finger_angle_deg": 0.1,
+   "arm_ray_miss_px": 1.9,
+   "gaze_angle_deg": 3.0,
+   "strict": true,
+   "reduced": false
+  }
+ ],
+ "strict_count": 24,
+ "strict_max_miss_px": 15.8,
+ "strict_mean_miss_px": 2.8,
+ "strict_max_angle_deg": 0.9,
+ "strict_max_gaze_deg": 15.3,
+ "strict_within_60px": 24,
+ "all_other_max_arm_miss_px": 53.0
+}

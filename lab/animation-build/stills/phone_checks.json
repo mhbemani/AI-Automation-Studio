@@ -1,0 +1,110 @@
+{
+ "HUM_pose_stand_phone": {
+  "range": [
+   1,
+   1
+  ],
+  "length_ok": true,
+  "phone_to_eyes_m": [
+   0.418,
+   0.418
+  ],
+  "screen_angle_to_eyes_deg": [
+   24.3,
+   24.3
+  ]
+ },
+ "HUM_phone_raise": {
+  "range": [
+   1,
+   20
+  ],
+  "length_ok": true,
+  "phone_to_eyes_m": [
+   0.446,
+   0.798
+  ],
+  "screen_angle_to_eyes_deg": [
+   64.3,
+   110.1
+  ]
+ },
+ "HUM_phone_hold_read": {
+  "range": [
+   1,
+   97
+  ],
+  "length_ok": true,
+  "loop_max_diff": 0.0,
+  "phone_to_eyes_m": [
+   0.417,
+   0.419
+  ],
+  "screen_angle_to_eyes_deg": [
+   23.4,
+   25.3
+  ]
+ },
+ "HUM_phone_type": {
+  "range": [
+   1,
+   49
+  ],
+  "length_ok": true,
+  "loop_max_diff": 0.0,
+  "phone_to_eyes_m": [
+   0.415,
+   0.418
+  ],
+  "screen_angle_to_eyes_deg": [
+   24.3,
+   26.7
+  ]
+ },
+ "HUM_phone_lower_pocket": {
+  "range": [
+   1,
+   30
+  ],
+  "length_ok": true,
+  "phone_to_eyes_m": [
+   0.425,
+   0.798
+  ],
+  "screen_angle_to_eyes_deg": [
+   23.9,
+   82.6
+  ]
+ },
+ "HUM_phone_show_claude": {
+  "range": [
+   1,
+   24
+  ],
+  "length_ok": true,
+  "phone_to_eyes_m": [
+   0.317,
+   0.407
+  ],
+  "screen_angle_to_eyes_deg": [
+   22.5,
+   47.5
+  ]
+ },
+ "HUM_walk_texting": {
+  "range": [
+   1,
+   25
+  ],
+  "length_ok": true,
+  "loop_max_diff": 0.0,
+  "phone_to_eyes_m": [
+   0.405,
+   0.409
+  ],
+  "screen_angle_to_eyes_deg": [
+   22.4,
+   22.6
+  ]
+ }
+}

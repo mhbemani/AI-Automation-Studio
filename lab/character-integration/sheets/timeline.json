@@ -1,0 +1,86 @@
+{
+ "fps": 30,
+ "duration": 42.233333333333334,
+ "events": [
+  {
+   "t": 0,
+   "action": "enter"
+  },
+  {
+   "t": 1,
+   "action": "wave"
+  },
+  {
+   "t": 1.6,
+   "action": "think"
+  },
+  {
+   "t": 3.2,
+   "action": "talk"
+  },
+  {
+   "t": 7.066666666666666,
+   "action": "talk"
+  },
+  {
+   "t": 8.133333333333333,
+   "action": "point_right"
+  },
+  {
+   "t": 10.766666666666667,
+   "action": "talk"
+  },
+  {
+   "t": 12.766666666666667,
+   "action": "talk"
+  },
+  {
+   "t": 13.466666666666667,
+   "action": "point_right"
+  },
+  {
+   "t": 17.3,
+   "action": "think"
+  },
+  {
+   "t": 19.133333333333333,
+   "action": "talk"
+  },
+  {
+   "t": 21.5,
+   "action": "talk"
+  },
+  {
+   "t": 25.1,
+   "action": "point_right"
+  },
+  {
+   "t": 27.4,
+   "action": "talk"
+  },
+  {
+   "t": 29.5,
+   "action": "point_right"
+  },
+  {
+   "t": 31.066666666666666,
+   "action": "talk"
+  },
+  {
+   "t": 34.1,
+   "action": "think"
+  },
+  {
+   "t": 34.96666666666667,
+   "action": "talk"
+  },
+  {
+   "t": 36.46666666666667,
+   "action": "talk"
+  },
+  {
+   "t": 40.13333333333333,
+   "action": "celebrate"
+  }
+ ]
+}

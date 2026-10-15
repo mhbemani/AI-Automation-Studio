@@ -1,0 +1,71 @@
+{
+ "HUM_react_startle": {
+  "frames": 16,
+  "expected": 16,
+  "end_minus_start_max": 0.0572
+ },
+ "HUM_react_laugh": {
+  "frames": 36,
+  "expected": 36,
+  "end_minus_start_max": 0.0
+ },
+ "HUM_react_impressed": {
+  "frames": 30,
+  "expected": 30,
+  "end_minus_start_max": 0.0
+ },
+ "HUM_react_shake_head": {
+  "frames": 18,
+  "expected": 18,
+  "end_minus_start_max": 0.0
+ },
+ "HUM_phone_to_seat_idle": {
+  "frames": 36,
+  "expected": 36,
+  "end_vs_seated_max_cm": 0.54,
+  "end_vs_seated_worst_bone": "DEF-f_ring.03.R"
+ },
+ "PHN_phone_pocket": {
+  "frames": 36,
+  "expected": 36
+ },
+ "HUM_stand_to_sit_car": {
+  "frames": 72,
+  "expected": 72,
+  "end_vs_seated_max_cm": 0.0,
+  "end_vs_seated_worst_bone": "DEF-thumb.01.R",
+  "planted_ankle_drift_cm": {
+   "L": 0.01,
+   "R": 0.0
+  },
+  "max_hip_ankle_m": 0.792,
+  "leg_length_m": 0.818
+ },
+ "HUM_sit_to_stand_car": {
+  "frames": 72,
+  "expected": 72,
+  "start_vs_seated_max_cm": 0.0
+ },
+ "CLA_react_proud_puff": {
+  "frames": 24,
+  "expected": 24,
+  "end_minus_start_max": 0.06
+ },
+ "CLA_react_oops": {
+  "frames": 20,
+  "expected": 20,
+  "end_minus_start_max": 0.077
+ },
+ "CLA_react_giggle": {
+  "frames": 25,
+  "expected": 24,
+  "loop_diff": 0.0
+ },
+ "CLA_pickup_arrival": {
+  "frames": 72,
+  "expected": 72,
+  "planted_step_max_cm_per_frame": 0.37,
+  "travel_m": 1.463,
+  "end_yaw_deg": -90.0
+ }
+}

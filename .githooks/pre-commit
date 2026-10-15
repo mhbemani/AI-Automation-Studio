@@ -1,0 +1,22 @@
+#!/bin/sh
+# Blocks risky files and secrets from being committed.
+# Enabled with: git config core.hooksPath .githooks   (see docs/GIT_RULES.md)
+# Do not bypass with --no-verify unless the creator says so.
+max=5242880 # 5 MB
+bad=0
+list=$(mktemp)
+git diff --cached --name-only --diff-filter=ACM > "$list"
+while IFS= read -r f; do
+  case "$f" in
+    *.blend|*.blend1|*.fbx|*.glb|*.gltf|*.wav|*.mp3|*.flac|*.m4a|*.zip|*.tar.gz|*.pem|*.key|*.ckpt|*.pth|*.onnx|*.safetensors|*.pt|.env|.env.*|*/.env|*/.env.*|.token|*/.token|*cred*.json|CLAUDE.md|.claude/*)
+      echo "blocked file type: $f"; bad=1;;
+  esac
+  size=$(git cat-file -s ":$f" 2>/dev/null || echo 0)
+  if [ "$size" -gt "$max" ]; then echo "over 5 MB: $f"; bad=1; fi
+done < "$list"
+rm -f "$list"
+if git diff --cached -U0 | grep '^+' | grep -v '^+++' | grep -qE 'sk-[A-Za-z0-9]{20,}|AIza[0-9A-Za-z_-]{20,}|gh[po]_[A-Za-z0-9]{30,}|-----BEGIN [A-Z ]*PRIVATE KEY-----|/Users/[A-Za-z0-9_.-]+/'; then
+  echo "an added line looks like a secret or a personal path"; bad=1
+fi
+[ "$bad" -eq 0 ] || echo "commit blocked: see docs/GIT_RULES.md"
+exit "$bad"

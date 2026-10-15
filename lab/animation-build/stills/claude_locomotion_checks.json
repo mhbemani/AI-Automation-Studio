@@ -1,0 +1,36 @@
+{
+ "CLA_walk_cycle": {
+  "range": [
+   1,
+   25
+  ],
+  "length_ok": true,
+  "loop_max_diff": 0.0,
+  "foot_drift_cm_in_stance": 0.0,
+  "min_foot_z_mm": -0.0,
+  "max_foot_z_cm": 3.99,
+  "stance_frames_per_leg": {
+   "1": 15,
+   "2": 15,
+   "3": 15,
+   "4": 15
+  }
+ },
+ "CLA_run_cycle": {
+  "range": [
+   1,
+   17
+  ],
+  "length_ok": true,
+  "loop_max_diff": 0.0,
+  "foot_drift_cm_in_stance": 0.002,
+  "min_foot_z_mm": -0.01,
+  "max_foot_z_cm": 5.96,
+  "stance_frames_per_leg": {
+   "1": 7,
+   "2": 7,
+   "3": 7,
+   "4": 7
+  }
+ }
+}

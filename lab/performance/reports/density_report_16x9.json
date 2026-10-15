@@ -1,0 +1,73 @@
+{
+ "scenes": [
+  {
+   "scene": 1,
+   "beats": 6,
+   "durationSec": 7.17,
+   "beatsPerSec": 0.84,
+   "bigBeats": 5,
+   "pairsCloserThan0.8s_any": 1,
+   "pairsCloserThan0.8s_big": 0,
+   "tonedDown": 0,
+   "autoAdded": 0
+  },
+  {
+   "scene": 2,
+   "beats": 6,
+   "durationSec": 6.2,
+   "beatsPerSec": 0.97,
+   "bigBeats": 3,
+   "pairsCloserThan0.8s_any": 2,
+   "pairsCloserThan0.8s_big": 0,
+   "tonedDown": 3,
+   "autoAdded": 0
+  },
+  {
+   "scene": 3,
+   "beats": 8,
+   "durationSec": 9.23,
+   "beatsPerSec": 0.87,
+   "bigBeats": 6,
+   "pairsCloserThan0.8s_any": 2,
+   "pairsCloserThan0.8s_big": 0,
+   "tonedDown": 2,
+   "autoAdded": 0
+  },
+  {
+   "scene": 4,
+   "beats": 9,
+   "durationSec": 10.07,
+   "beatsPerSec": 0.89,
+   "bigBeats": 6,
+   "pairsCloserThan0.8s_any": 4,
+   "pairsCloserThan0.8s_big": 0,
+   "tonedDown": 3,
+   "autoAdded": 0
+  },
+  {
+   "scene": 5,
+   "beats": 6,
+   "durationSec": 5.9,
+   "beatsPerSec": 1.02,
+   "bigBeats": 4,
+   "pairsCloserThan0.8s_any": 2,
+   "pairsCloserThan0.8s_big": 0,
+   "tonedDown": 2,
+   "autoAdded": 0
+  },
+  {
+   "scene": 6,
+   "beats": 6,
+   "durationSec": 6.17,
+   "beatsPerSec": 0.97,
+   "bigBeats": 4,
+   "pairsCloserThan0.8s_any": 3,
+   "pairsCloserThan0.8s_big": 0,
+   "tonedDown": 2,
+   "autoAdded": 0
+  }
+ ],
+ "rule_seconds": 0.8,
+ "total_close_big_pairs": 0,
+ "total_close_pairs_any": 14
+}

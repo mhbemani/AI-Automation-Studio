@@ -1,0 +1,83 @@
+{
+ "totals": {
+  "car": 19700,
+  "claude": 1212,
+  "other": 4922,
+  "human": 4024,
+  "phone": 476
+ },
+ "parts": {
+  "car": {
+   "CAR_Dashboard": 796,
+   "CAR_Door_L": 256,
+   "CAR_Door_R": 256,
+   "CAR_Ext_Body": 5028,
+   "CAR_Exterior": 0,
+   "CAR_Int_DoorCard_L": 340,
+   "CAR_Int_DoorCard_R": 340,
+   "CAR_Int_DoorCards": 98,
+   "CAR_Int_Floor": 28,
+   "CAR_Monitor": 188,
+   "CAR_Monitor_Screen": 2,
+   "CAR_RearViewMirror": 44,
+   "CAR_RearViewMirror_Glass": 12,
+   "CAR_RearViewMirror_Stem": 12,
+   "CAR_Seat_FL": 624,
+   "CAR_Seat_FL.001": 624,
+   "CAR_Seat_FL_Back": 1296,
+   "CAR_Seat_FL_Back.001": 1296,
+   "CAR_Seat_FL_Base": 756,
+   "CAR_Seat_FL_Base.001": 756,
+   "CAR_Seat_FL_Headrest": 432,
+   "CAR_Seat_FL_Headrest.001": 432,
+   "CAR_Seat_FL_Headrest.002": 432,
+   "CAR_Seat_FL_Headrest_Posts": 56,
+   "CAR_Seat_FL_Headrest_Posts.001": 56,
+   "CAR_Seat_FL_Headrest_Posts.002": 56,
+   "CAR_SteeringColumn": 12,
+   "CAR_SteeringWheel": 1136,
+   "CAR_Wheel_back-left": 1084,
+   "CAR_Wheel_back-right": 1084,
+   "CAR_Wheel_front-left": 1084,
+   "CAR_Wheel_front-right": 1084
+  },
+  "claude": {
+   "CLA_Arm_L": 108,
+   "CLA_Arm_R": 108,
+   "CLA_Blush_L": 76,
+   "CLA_Blush_R": 76,
+   "CLA_Body": 108,
+   "CLA_Eye_L": 76,
+   "CLA_Eye_R": 76,
+   "CLA_Glint_L": 76,
+   "CLA_Glint_R": 76,
+   "CLA_Leg_1": 108,
+   "CLA_Leg_2": 108,
+   "CLA_Leg_3": 108,
+   "CLA_Leg_4": 108
+  },
+  "other": {
+   "CUS_Cushion": 2206,
+   "MAG_Puff_1": 80,
+   "MAG_Puff_2": 80,
+   "MAG_Puff_3": 80,
+   "MAG_Ring_Inner": 640,
+   "MAG_Ring_Main": 1152,
+   "MAG_Ring_Wisp": 432,
+   "MAG_Sparkles": 252
+  },
+  "human": {
+   "HUM_Body": 4024
+  },
+  "phone": {
+   "PHN_Phone": 100,
+   "PHN_Phone_Screen": 100,
+   "PHN_UI_Divider": 46,
+   "PHN_UI_GreetAvatar": 46,
+   "PHN_UI_InputBar": 46,
+   "PHN_UI_ReplyAvatar": 46,
+   "PHN_UI_Send": 46,
+   "PHN_UI_UserBubble": 46
+  }
+ }
+}

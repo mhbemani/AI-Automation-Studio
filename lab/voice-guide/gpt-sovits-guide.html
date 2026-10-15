@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>GPT-SoVITS Guide</title>
+<style>
+@page{size:A4;margin:18mm 16mm}
+body{font:10.5pt/1.5 -apple-system,"Segoe UI",Helvetica,Arial,sans-serif;color:#1c1c1e}
+h1{font-size:25pt;margin:0 0 4pt}h2{font-size:15pt;border-bottom:2px solid #3b5bdb;padding-bottom:3pt;margin-top:22pt;break-after:avoid}
+h3{font-size:12pt;margin:13pt 0 4pt;color:#3b5bdb;break-after:avoid}
+pre{background:#f1f3f5;border:1px solid #dee2e6;border-radius:4px;padding:7pt 9pt;font:8.8pt/1.4 Menlo,Consolas,monospace;white-space:pre-wrap;break-inside:avoid}
+code{font:9pt Menlo,Consolas,monospace;background:#f1f3f5;padding:0 2pt}
+table{border-collapse:collapse;width:100%;margin:6pt 0;break-inside:avoid}td,th{border:1px solid #ced4da;padding:3pt 6pt;text-align:left;vertical-align:top;font-size:9.5pt}th{background:#e7ecff}
+.box{border-left:4px solid #f08c00;background:#fff4e0;padding:6pt 10pt;margin:8pt 0;break-inside:avoid}
+.sub{color:#555}.pb{break-before:page}li{margin:2pt 0}.cb{padding-left:0}.cb li{list-style:none}
+</style></head><body>
+
+<h1>GPT-SoVITS Guide</h1>
+<p class="sub">Train on the TUF F15 (Windows, NVIDIA) &middot; Run on the MacBook (M2, 8 GB) &middot; 2026-10-08</p>
+
+<table><tr><th>Part</th><th>Machine</th><th>Time</th></tr>
+<tr><td>A. Setup and record</td><td>TUF</td><td>Day 1</td></tr>
+<tr><td>B. Train</td><td>TUF</td><td>Day 2 (about 1&ndash;2 h of training)</td></tr>
+<tr><td>C. Move model files</td><td>TUF &rarr; Mac</td><td>10 min</td></tr>
+<tr><td>D. Install and run</td><td>Mac</td><td>Day 3</td></tr>
+<tr><td>E. Test and report</td><td>Mac</td><td>Day 3</td></tr></table>
+<div class="box">Voice owner must agree to having their voice cloned. Before any monetized use, check the licence of the GPT-SoVITS base models on their Hugging Face page. YouTube may need the "synthetic content" label.</div>
+
+<h2>A. TUF: setup and record</h2>
+<h3>A1. Prepare the laptop</h3>
+<ol>
+<li>Plug in the charger. Armoury Crate &rarr; mode <b>Turbo</b>. Sleep = Never (plugged in). Use a hard surface or cooling pad.</li>
+<li>Keep 30 GB free. Update the NVIDIA driver (nvidia.com/drivers), restart.</li>
+<li>PowerShell: <code>nvidia-smi</code>. Write down the GPU name and VRAM.</li>
+<li>Install tools (PowerShell):
+<pre>winget install --id 7zip.7zip -e
+winget install --id Audacity.Audacity -e
+winget install --id Gyan.FFmpeg -e</pre></li>
+<li>Create the work folder: <code>mkdir C:\voicelab\dataset</code>. Keep everything under <code>C:\voicelab</code> (no spaces, no non-English letters).</li>
+</ol>
+<h3>A2. Record the voice</h3>
+<ol>
+<li>Quiet room, microphone 10&ndash;15 cm from the mouth, no music, no effects, no noise-reduction in the recording app.</li>
+<li>Audacity: project rate <b>44100 Hz</b>, <b>Mono</b>. Peaks between -12 dB and -6 dB, never clipping.</li>
+<li>Record <b>20&ndash;30 minutes</b> total (minimum 10):
+<ul><li>10 min: the sentences below.</li><li>10 min: a public-domain book (Project Gutenberg).</li><li>10 min: a draft video script in the channel style.</li></ul>
+<pre>1.  Welcome back. Today we are going to build something that runs while you sleep.
+2.  Wait, really? That actually worked on the first try?
+3.  Okay, let me explain this slowly, because it is easy to miss.
+4.  The workflow has three steps: collect the data, clean it, and send the report.
+5.  I did not expect that. Honestly, I am a little bit surprised.
+6.  Never trust a number you have not checked twice.
+7.  Here is the problem: the server answers, but it answers with nothing.
+8.  Great. Now we press the button, and we wait.
+9.  It costs zero dollars, and it takes about ten minutes.
+10. Don't worry, we will fix it together. It is just a missing comma.
+11. Is that a bug, or is it a feature? Let's find out.
+12. In March, two hundred and forty people signed up; by June, there were over three thousand.
+13. Blender, n8n, Docker, and a language model walk into a car.
+14. Quiet, now. Something is happening on the screen.
+15. That is the whole trick. Nothing more, nothing less.
+16. Okay, okay, that was a bad joke.
+17. If it fails again, do not panic. Read the error message out loud.
+18. The camera moves left, the road bends, and the sun goes down behind the hills.
+19. Why would anyone build it this way? Because it works, and because it is ours.
+20. Thank you for watching. See you in the next one.</pre></li>
+<li>One sentence per take, 1 second of silence before and after. If you stumble, wait 2 seconds and repeat the sentence.</li>
+</ol>
+<h3>A3. Clean and export</h3>
+<ol>
+<li>Delete mistakes, coughs, clicks and silences longer than 1.5 s.</li>
+<li>Effect &rarr; Normalize to <b>-3 dB</b>. No compression, no EQ. Noise reduction only if the room was noisy (mild, 6&ndash;12 dB).</li>
+<li>Export WAV, 44100 Hz, mono, 16-bit into <code>C:\voicelab\dataset</code> as <code>take_001.wav</code>, <code>take_002.wav</code>, &hellip; Back the folder up.</li>
+<li>Make two <b>reference clips</b>, each <b>5&ndash;9 seconds</b> (the tool rejects anything outside 3&ndash;10 s), clean, no stumbles:
+<pre>C:\voicelab\ref_neutral.wav   + C:\voicelab\ref_neutral.txt   (exact words)
+C:\voicelab\ref_excited.wav   + C:\voicelab\ref_excited.txt   (exact words)</pre></li>
+<li>Listen to 5 random files with headphones: no hiss, echo, clipping or other voices. Re-record if many fail.</li>
+</ol>
+
+<h2 class="pb">B. TUF: install and train</h2>
+<h3>B1. Install</h3>
+<ol>
+<li>Open github.com/RVC-Boss/GPT-SoVITS. In the README, open the Windows integrated package link (Hugging Face repo <code>lj1995/GPT-SoVITS-windows-package</code>). Download the newest <code>.7z</code> (several GB).</li>
+<li>Right-click &rarr; 7-Zip &rarr; Extract to <code>C:\voicelab\GPT-SoVITS</code>.</li>
+<li>Double-click <code>go-webui.bat</code>. Keep the black console open. The browser opens the WebUI (usually http://localhost:9874).</li>
+<li>If Windows Defender blocks files, confirm the source is the official repo, then add <code>C:\voicelab</code> as an exclusion.</li>
+</ol>
+<h3>B2. Prepare the dataset</h3>
+<p>WebUI tab <b>1-GPT-SoVITS-TTS</b>. In the version dropdown choose the newest (v2 or later).</p>
+<ol>
+<li><b>0b. Audio slicer:</b> input <code>C:\voicelab\dataset</code>, output <code>C:\voicelab\slices</code>, defaults. Click <b>Start slicing</b>. Wait for "done".</li>
+<li><b>0c. ASR:</b> input folder <code>C:\voicelab\slices</code>, model <b>Faster Whisper</b>, language <b>en</b>, precision float16. Click <b>Start</b>. It writes a <code>.list</code> file. Note its path from the log.</li>
+<li><b>0d. Proofreading:</b> tick "Open labelling WebUI", fix every wrong word, delete lines with noise, click <b>Submit Text</b>, then <b>Save File</b>. Wrong text = wrong pronunciation. Take 15&ndash;30 min.</li>
+<li><b>1A. Dataset formatting:</b> experiment name <code>myvoice</code>; text file = the <code>.list</code> path; audio folder = <code>C:\voicelab\slices</code>. Click <b>Start one-click formatting</b>. Wait until the three steps (tokenization, SSL feature extraction, semantic tokens) all finish without red errors.</li>
+</ol>
+<h3>B3. Train</h3>
+<p>Tab <b>1B-Fine-tuning</b>. Pick batch sizes by VRAM:</p>
+<table><tr><th>VRAM</th><th>SoVITS batch size</th><th>GPT batch size</th></tr>
+<tr><td>4 GB</td><td>2</td><td>2</td></tr><tr><td>6 GB</td><td>4</td><td>4</td></tr><tr><td>8 GB</td><td>8</td><td>6</td></tr></table>
+<ol>
+<li><b>SoVITS training:</b> batch size from the table, total epochs <b>8</b>, save every <b>4</b>, "save only latest" <b>Off</b>, "save small model to weights" <b>On</b>. Click <b>Start SoVITS training</b>. 10&ndash;40 min.</li>
+<li><b>GPT training:</b> batch size from the table, total epochs <b>15</b>, save every <b>5</b>, "save only latest" <b>Off</b>, "save weights" <b>On</b>, DPO off. Click <b>Start GPT training</b>. 10&ndash;40 min.</li>
+<li>Watch VRAM with <code>nvidia-smi -l 2</code>. On "CUDA out of memory": lower the batch size by half, restart that step.</li>
+<li>Finished weights are in the package folder:
+<pre>C:\voicelab\GPT-SoVITS\GPT_weights_v2\myvoice-e15.ckpt   (and other epochs)
+C:\voicelab\GPT-SoVITS\SoVITS_weights_v2\myvoice_e8_s....pth</pre>
+(folder names carry the version, e.g. <code>_v2</code>, <code>_v2Pro</code>.)</li>
+</ol>
+<h3>B4. Quick check on the TUF</h3>
+<ol>
+<li>Tab <b>1C-inference</b>: tick <b>Open TTS inference WebUI</b>, click refresh, choose the highest-epoch GPT and SoVITS weights.</li>
+<li>Upload <code>ref_neutral.wav</code>, paste the exact text, language English. Generate T01 and T02 from section E. If it sounds clearly wrong, retrain with +4 SoVITS epochs or re-check the transcripts in 0d.</li>
+</ol>
+
+<h2>C. Move the model to the Mac</h2>
+<ol>
+<li>Copy to a USB drive or cloud folder, keeping names:
+<pre>GPT_weights_v2\myvoice-e15.ckpt (the best 1&ndash;2 epochs)
+SoVITS_weights_v2\myvoice_e8_s....pth (the best 1&ndash;2 epochs)
+ref_neutral.wav + ref_neutral.txt
+ref_excited.wav + ref_excited.txt</pre></li>
+<li>On the Mac, put them in <code>~/voicelab/model/</code>.</li>
+</ol>
+
+<h2 class="pb">D. Mac: install and run</h2>
+<p>Open Terminal. If the README (github.com/RVC-Boss/GPT-SoVITS) gives different install lines, follow the README.</p>
+<h3>D1. Prerequisites</h3>
+<pre>xcode-select --install
+brew install ffmpeg
+brew install --cask miniconda
+conda init zsh</pre>
+<p>Close and reopen Terminal. Free at least 15 GB disk. Close Chrome and other heavy apps while running.</p>
+<h3>D2. Install</h3>
+<pre>cd ~/voicelab
+git clone https://github.com/RVC-Boss/GPT-SoVITS.git
+cd GPT-SoVITS
+conda create -n GPTSoVits python=3.10 -y
+conda activate GPTSoVits
+bash install.sh --device MPS --source HF</pre>
+<p>This downloads the pretrained base models (several GB). If it ends with an error about MPS, rerun with <code>--device CPU</code>.</p>
+<h3>D3. Place your model</h3>
+<pre>mkdir -p GPT_weights_v2 SoVITS_weights_v2
+cp ~/voicelab/model/myvoice-e15.ckpt GPT_weights_v2/
+cp ~/voicelab/model/myvoice_e8_s*.pth SoVITS_weights_v2/</pre>
+<p>Use the same version suffix (<code>_v2</code>, <code>_v2Pro</code>, &hellip;) that the TUF used.</p>
+<h3>D4. Run with the web UI</h3>
+<pre>cd ~/voicelab/GPT-SoVITS
+conda activate GPTSoVits
+python webui.py</pre>
+<ol>
+<li>Open the printed address (usually http://localhost:9874). Tab <b>1C-inference</b>, tick <b>Open TTS inference WebUI</b>.</li>
+<li>Refresh, choose your GPT and SoVITS weights.</li>
+<li>Upload <code>ref_neutral.wav</code>, paste its exact text, language English. Paste the text to speak. Click <b>Synthesize</b>.</li>
+<li>If you get a half-precision or MPS error, tick "No half precision" (or switch to CPU, see D2).</li>
+</ol>
+<h3>D5. Run as an API (for n8n and scripts)</h3>
+<pre>cd ~/voicelab/GPT-SoVITS
+conda activate GPTSoVits
+python api_v2.py -a 127.0.0.1 -p 9880 -c GPT_SoVITS/configs/tts_infer.yaml</pre>
+<p>Switch to your model once after the server starts:</p>
+<pre>curl "http://127.0.0.1:9880/set_gpt_weights?weights_path=GPT_weights_v2/myvoice-e15.ckpt"
+curl "http://127.0.0.1:9880/set_sovits_weights?weights_path=SoVITS_weights_v2/myvoice_e8_s....pth"</pre>
+<p>Generate a line (replace the weights file and text):</p>
+<pre>curl -X POST http://127.0.0.1:9880/tts -H "Content-Type: application/json" -d '{
+ "text":"Welcome back. Today we are going to build something that runs while you sleep.",
+ "text_lang":"en",
+ "ref_audio_path":"~/voicelab/model/ref_neutral.wav",
+ "prompt_text":"EXACT TEXT OF ref_neutral",
+ "prompt_lang":"en",
+ "media_type":"wav"}' --output T01.wav</pre>
+<p>In n8n use an HTTP Request node with the same JSON body and the response set to "File".</p>
+
+<h2>E. Test and report</h2>
+<h3>E1. Test lines (generate all 10)</h3>
+<pre>T01. Welcome back. Today we are going to build something that runs while you sleep.
+T02. Wait, really? That actually worked on the first try?
+T03. Okay, let me explain this slowly, because it is easy to miss.
+T04. In March, two hundred and forty people signed up; by June, there were over three thousand.
+T05. Blender, n8n, Docker, and a language model walk into a car.
+T06. Don't worry, we will fix it together. It is just a missing comma.
+T07. The camera moves left, the road bends, and the sun goes down behind the hills.
+T08. Honestly? I did not expect that. I am a little bit surprised, and a little bit scared.
+T09. Here is the problem: the server answers, but it answers with nothing. So what do we do? We check the logs, one line at a time, until the answer shows up.
+T10. Thank you for watching. See you in the next one.</pre>
+<p>Generate each with: (a) <code>ref_neutral</code>, (b) <code>ref_excited</code>, (c) two different epochs of the model. Name files <code>T01_neutral_e15.wav</code> etc.</p>
+<h3>E2. Tuning</h3>
+<table><tr><th>Problem</th><th>Fix</th></tr>
+<tr><td>Words repeated or skipped</td><td>top_k 5&ndash;10, temperature 0.6&ndash;0.8, split the sentence</td></tr>
+<tr><td>Flat, robotic delivery</td><td>Try <code>ref_excited</code>; use a reference with the emotion you want</td></tr>
+<tr><td>Wrong pronunciation of a word</td><td>Spell it phonetically in the text; write numbers as words</td></tr>
+<tr><td>Metallic or glitchy</td><td>Use an earlier epoch; check dataset noise and transcripts</td></tr>
+<tr><td>Speech cut at the end</td><td>Add a period; reduce the text length per call</td></tr></table>
+<h3>E3. Measure on the Mac</h3>
+<ul>
+<li>Seconds to generate T09 (length of audio vs time taken).</li>
+<li>Memory: Activity Monitor &rarr; Memory tab, peak while generating. Does it swap?</li>
+<li>Same voice on the 10 lines? Any glitches?</li>
+</ul>
+
+<h2>F. Troubleshooting</h2>
+<table><tr><th>Symptom</th><th>Fix</th></tr>
+<tr><td>TUF: CUDA out of memory</td><td>Halve batch size, close other apps, restart step</td></tr>
+<tr><td>TUF: slicing or ASR fails</td><td>Check the folder path has no spaces; check <code>ffmpeg -version</code> in a new PowerShell</td></tr>
+<tr><td>TUF: console closes immediately</td><td>Run <code>go-webui.bat</code> from PowerShell to read the error; extract again to a short path</td></tr>
+<tr><td>TUF: laptop throttles</td><td>Cooling pad, Turbo mode, keep checkpoints saved</td></tr>
+<tr><td>Mac: install.sh fails</td><td>Check <code>conda activate GPTSoVits</code>, Python 3.10, Xcode tools installed; retry with <code>--device CPU</code></td></tr>
+<tr><td>Mac: very slow or swapping</td><td>Close all apps, use CPU, generate shorter lines</td></tr>
+<tr><td>Mac: model not listed</td><td>Files must be in <code>GPT_weights_v2</code> / <code>SoVITS_weights_v2</code> (same version suffix); click refresh</td></tr>
+<tr><td>Mac: reference rejected</td><td>Reference clip must be 3&ndash;10 seconds</td></tr></table>
+
+<h2>G. Send back</h2>
+<ul class="cb">
+<li>&#9744; Trained GPT and SoVITS weight files and both reference clips with their texts.</li>
+<li>&#9744; All generated test lines.</li>
+<li>&#9744; Dataset notes: minutes recorded, microphone, room.</li>
+<li>&#9744; Measurements from E3 and the TUF training times and VRAM use.</li>
+<li>&#9744; The exact commands that worked, and anything that failed.</li>
+</ul>
+</body></html>

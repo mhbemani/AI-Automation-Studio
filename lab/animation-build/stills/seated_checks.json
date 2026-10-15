@@ -1,0 +1,55 @@
+{
+ "HUM_pass_hands_lap": {
+  "range": [
+   1,
+   97
+  ],
+  "length_ok": true,
+  "loop_max_diff": 0.0,
+  "over_limit": {},
+  "min_ankle_z": 0.075,
+  "max_ankle_z": 0.1
+ },
+ "HUM_pass_turn_to_claude": {
+  "range": [
+   1,
+   24
+  ],
+  "length_ok": true,
+  "over_limit": {},
+  "min_ankle_z": 0.083,
+  "max_ankle_z": 0.093
+ },
+ "HUM_pass_look_out_window": {
+  "range": [
+   1,
+   121
+  ],
+  "length_ok": true,
+  "loop_max_diff": 0.0,
+  "over_limit": {},
+  "min_ankle_z": 0.075,
+  "max_ankle_z": 0.1
+ },
+ "HUM_pass_lean_forward": {
+  "range": [
+   1,
+   20
+  ],
+  "length_ok": true,
+  "over_limit": {},
+  "min_ankle_z": 0.044,
+  "max_ankle_z": 0.093
+ },
+ "HUM_talk_hand_gesture_a": {
+  "range": [
+   1,
+   37
+  ],
+  "length_ok": true,
+  "loop_max_diff": 0.0,
+  "over_limit": {},
+  "min_ankle_z": 0.075,
+  "max_ankle_z": 0.097
+ }
+}

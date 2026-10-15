@@ -1,0 +1,68 @@
+PASS out/audio_mix.wav: 55.6250 s vs timeline 55.6250 s (<= 1 frame)
+PASS out/audio_voices_only.wav: 55.6250 s vs timeline 55.6250 s (<= 1 frame)
+PASS shots tile [1, 1336) with no gaps or overlaps
+PASS every shot holds >= 29 frames (1.2 s)
+PASS line 1 lies inside exactly one shot (['S04'])
+PASS line 1 words ordered and inside the line
+PASS line 2 lies inside exactly one shot (['S05'])
+PASS line 2 words ordered and inside the line
+PASS line 3 lies inside exactly one shot (['S06'])
+PASS line 3 words ordered and inside the line
+PASS line 4 lies inside exactly one shot (['S07'])
+PASS line 4 words ordered and inside the line
+PASS line 5 lies inside exactly one shot (['S08'])
+PASS line 5 words ordered and inside the line
+PASS line 6 lies inside exactly one shot (['S09'])
+PASS line 6 words ordered and inside the line
+PASS line 7 lies inside exactly one shot (['S10'])
+PASS line 7 words ordered and inside the line
+PASS line 8 lies inside exactly one shot (['S11'])
+PASS line 8 words ordered and inside the line
+PASS line 9 lies inside exactly one shot (['S12'])
+PASS line 9 words ordered and inside the line
+PASS line 10 lies inside exactly one shot (['S13'])
+PASS line 10 words ordered and inside the line
+PASS line 11 lies inside exactly one shot (['S14'])
+PASS line 11 words ordered and inside the line
+PASS lines do not overlap
+PASS envelope_claude.json: 1335 values in 0..1 (video 1335 frames)
+PASS envelope_human.json: 1335 values in 0..1 (video 1335 frames)
+PASS all emotion names in emotionsAllowed
+PASS emotion key frames inside the video
+PASS motion cues in order
+PASS phone typing and send inside the phone shot
+PASS out/audio_mix.wav: -13.9 LUFS (target -14.0 +/- 0.3), true peak -1.7 dBTP (<= -1.0)
+PASS out/audio_voices_only.wav: -13.9 LUFS (target -14.0 +/- 0.3), true peak -1.7 dBTP (<= -1.0)
+
+line who     start s   end s  dur s words  wpm  shot  emotion
+   1 claude    12.00   13.38   1.38     4  175  S04   happy
+   2 human     13.71   19.17   5.46    14  154  S05   curious
+   3 claude    19.50   24.62   5.12    17  199  S06   excited
+   4 human     24.96   26.92   1.96     6  184  S07   surprised
+   5 claude    27.25   33.62   6.38    18  169  S08   thoughtful
+   6 human     33.96   35.58   1.62     7  258  S09   curious
+   7 claude    35.92   42.83   6.92    24  208  S10   proud
+   8 human     43.17   45.25   2.08     8  230  S11   curious
+   9 claude    45.58   49.17   3.58    12  201  S12   happy
+  10 human     49.50   51.08   1.58     4  152  S13   amused
+  11 claude    51.42   54.62   3.21    11  206  S14   happy
+
+total: 1335 frames = 55.62 s (24 fps); speech 39.29 s, 125 words, 191 wpm while speaking
+
+cut list (frames [start, end), seconds):
+  S01 EST   CAM_EST_Street      1-97      0.00-  4.00  (4.00 s)
+  S02 PHONE CAM_PHONE_CU       97-181     4.00-  7.50  (3.50 s)
+  S03 EST   CAM_EST_Street    181-277     7.50- 11.50  (4.00 s)
+  S04 INT   CAM_HUMAN_POV     277-330    11.50- 13.71  (2.21 s)
+  S05 INT   CAM_CLAUDE_POV    330-469    13.71- 19.50  (5.79 s)
+  S06 INT   CAM_HUMAN_POV     469-600    19.50- 24.96  (5.46 s)
+  S07 INT   CAM_CLAUDE_POV    600-655    24.96- 27.25  (2.29 s)
+  S08 INT   CAM_HUMAN_POV     655-816    27.25- 33.96  (6.71 s)
+  S09 INT   CAM_CLAUDE_POV    816-863    33.96- 35.92  (1.96 s)
+  S10 INT   CAM_HUMAN_POV     863-1037   35.92- 43.17  (7.25 s)
+  S11 INT   CAM_CLAUDE_POV   1037-1095   43.17- 45.58  (2.42 s)
+  S12 INT   CAM_HUMAN_POV    1095-1189   45.58- 49.50  (3.92 s)
+  S13 INT   CAM_CLAUDE_POV   1189-1235   49.50- 51.42  (1.92 s)
+  S14 INT   CAM_HUMAN_POV    1235-1336   51.42- 55.62  (4.21 s)
+
+ALL CHECKS PASSED

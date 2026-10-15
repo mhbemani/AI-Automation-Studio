@@ -1,0 +1,33 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: studio
+      POSTGRES_PASSWORD: studio_local
+      POSTGRES_DB: studio
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    ports: ["5433:5432"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U studio"]
+      interval: 3s
+      retries: 20
+  n8n:
+    image: docker.n8n.io/n8nio/n8n:latest
+    depends_on:
+      postgres: {condition: service_healthy}
+    ports: ["5678:5678"]
+    environment:
+      N8N_HOST: localhost
+      WEBHOOK_URL: http://localhost:5678/
+      N8N_SECURE_COOKIE: "false"
+      NODES_EXCLUDE: "[]"          # Execute Command node is disabled by default in n8n 2.x
+      N8N_RUNNERS_ENABLED: "true"
+      DB_TYPE: sqlite              # n8n's own state; content_items lives in postgres
+    volumes:
+      - n8ndata:/home/node/.n8n
+      - ./work:/work               # shared folder: scripts + outputs
+volumes:
+  pgdata:
+  n8ndata:

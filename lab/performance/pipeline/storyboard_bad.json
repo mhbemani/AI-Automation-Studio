@@ -1,0 +1,474 @@
+{
+ "version": 3,
+ "topic": "What happens when you click Login?",
+ "series": "How Software Actually Works",
+ "voice": {
+  "engine": "kokoro",
+  "main": "bf_emma",
+  "alt": "af_heart",
+  "speed": 0.95
+ },
+ "targetSeconds": 45,
+ "bed": "generated",
+ "scenes": [
+  {
+   "id": 1,
+   "layout": "presenter_center_typography",
+   "narration": "You click Login. Nothing seems to happen. But in under a second, five different systems just talked about you.",
+   "onScreen": [
+    {
+     "text": "You click Login.",
+     "cue": "You"
+    },
+    {
+     "text": "5 systems. Under 1 second.",
+     "cue": "under"
+    }
+   ],
+   "performance": [
+    {
+     "at": 0.0,
+     "gesture": "wave",
+     "target": "viewer",
+     "emotion": "friendly",
+     "intensity": 0.5,
+     "foo": 1
+    },
+    {
+     "cue": "click",
+     "gesture": "press",
+     "target": "viewer",
+     "emotion": "friendly",
+     "intensity": 0.7
+    },
+    {
+     "cue": "Nothing",
+     "gesture": "shrug",
+     "target": "viewer",
+     "emotion": "angry",
+     "intensity": 0.8
+    },
+    {
+     "cue": "But",
+     "gesture": "lean_in",
+     "target": "viewer",
+     "emotion": "excited",
+     "intensity": 0.7
+    },
+    {
+     "cue": "five",
+     "gesture": "point_at",
+     "target": "text:1",
+     "emotion": "excited",
+     "intensity": 0.8
+    },
+    {
+     "cue": "talked",
+     "gesture": "point_viewer",
+     "target": "viewer",
+     "emotion": "playful",
+     "intensity": 0.6
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "layout": "presenter_left_diagram_right",
+   "narration": "First, your browser sends your email and password to the server, over an encrypted connection.",
+   "nodes": [
+    "Browser",
+    "API",
+    "Database"
+   ],
+   "packets": [
+    {
+     "from": "Browser",
+     "to": "API",
+     "label": "POST /login",
+     "cue": "sends"
+    }
+   ],
+   "focus": [
+    {
+     "node": "Browser",
+     "cue": "browser"
+    },
+    {
+     "node": "API",
+     "cue": "server"
+    }
+   ],
+   "performance": [
+    {
+     "at": 0.0,
+     "gesture": "present",
+     "target": "diagram",
+     "emotion": "confident",
+     "intensity": 0.6
+    },
+    {
+     "cue": "nonexistent",
+     "gesture": "point_at",
+     "target": "node:Browser",
+     "emotion": "confident",
+     "intensity": 0.7
+    },
+    {
+     "cue": "sends",
+     "gesture": "track",
+     "target": "viewer",
+     "emotion": "confident",
+     "intensity": 0.8
+    },
+    {
+     "cue": "server",
+     "gesture": "point_at",
+     "target": "node:API",
+     "emotion": "confident",
+     "intensity": 0.7
+    },
+    {
+     "cue": "encrypted",
+     "gesture": "beat",
+     "target": "viewer",
+     "emotion": "reassuring",
+     "intensity": 0.6
+    },
+    {
+     "cue": "connection",
+     "gesture": "nod",
+     "target": "viewer",
+     "emotion": "reassuring",
+     "intensity": 0.5
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "layout": "presenter_left_diagram_right",
+   "narration": "The server looks you up in the database. It never keeps your password, only a hash, a scrambled fingerprint. So it hashes what you typed, and compares.",
+   "nodes": [
+    "Browser",
+    "API",
+    "Database"
+   ],
+   "packets": [
+    {
+     "from": "API",
+     "to": "Database",
+     "label": "find user",
+     "cue": "looks"
+    },
+    {
+     "from": "Database",
+     "to": "API",
+     "label": "stored hash",
+     "cue": "hash"
+    }
+   ],
+   "focus": [
+    {
+     "node": "API",
+     "cue": "server"
+    },
+    {
+     "node": "Database",
+     "cue": "database"
+    },
+    {
+     "node": "API",
+     "cue": "compares",
+     "label": "hashes match \u2713"
+    }
+   ],
+   "performance": [
+    {
+     "cue": "server",
+     "gesture": "dance",
+     "target": "node:API",
+     "emotion": "confident",
+     "intensity": 0.6
+    },
+    {
+     "cue": "looks",
+     "gesture": "track",
+     "target": "packet:0",
+     "emotion": "curious",
+     "intensity": 0.8
+    },
+    {
+     "cue": "database",
+     "gesture": "point_at",
+     "target": "node:Database",
+     "emotion": "curious",
+     "intensity": 0.7
+    },
+    {
+     "cue": "never",
+     "gesture": "shake_head",
+     "target": "viewer",
+     "emotion": "serious",
+     "intensity": 0.8
+    },
+    {
+     "cue": "hash",
+     "gesture": "track",
+     "target": "packet:1",
+     "emotion": "thoughtful",
+     "intensity": 0.8
+    },
+    {
+     "cue": "scrambled",
+     "gesture": "scramble",
+     "target": "viewer",
+     "emotion": "playful",
+     "intensity": 0.8
+    },
+    {
+     "cue": "hashes",
+     "gesture": "point_at",
+     "target": "node:API",
+     "emotion": "confident",
+     "intensity": 0.7
+    },
+    {
+     "cue": "compares",
+     "gesture": "compare",
+     "target": "node:API",
+     "emotion": "satisfied",
+     "intensity": 0.8
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "layout": "presenter_corner_diagram_full",
+   "narration": "If they match, the server creates a token, a signed pass, and sends it back. Your browser then shows it with every request, and the server checks the signature.",
+   "nodes": [
+    "Browser",
+    "API",
+    "Database"
+   ],
+   "packets": [
+    {
+     "from": "API",
+     "to": "Browser",
+     "label": "token",
+     "cue": "sends"
+    },
+    {
+     "from": "Browser",
+     "to": "API",
+     "label": "GET /profile + token",
+     "cue": "shows"
+    },
+    {
+     "from": "API",
+     "to": "Browser",
+     "label": "200 OK",
+     "cue": "signature"
+    }
+   ],
+   "focus": [
+    {
+     "node": "API",
+     "cue": "creates",
+     "label": "signs a token"
+    },
+    {
+     "node": "API",
+     "cue": "checks",
+     "label": "verifies signature \u2713"
+    }
+   ],
+   "performance": [
+    {
+     "cue": "match",
+     "gesture": "nod",
+     "target": "node:API",
+     "emotion": "satisfied",
+     "intensity": 0.6
+    },
+    {
+     "cue": "creates",
+     "gesture": "point_at",
+     "target": "node:Cache",
+     "emotion": "confident",
+     "intensity": 0.7
+    },
+    {
+     "cue": "token",
+     "gesture": "offer",
+     "target": "node:API",
+     "emotion": "proud",
+     "intensity": 0.7
+    },
+    {
+     "cue": "sends",
+     "gesture": "track",
+     "target": "packet:0",
+     "emotion": "confident",
+     "intensity": 0.8
+    },
+    {
+     "cue": "browser",
+     "gesture": "point_at",
+     "target": "node:Browser",
+     "emotion": "confident",
+     "intensity": 0.7
+    },
+    {
+     "cue": "shows",
+     "gesture": "track",
+     "target": "packet:1",
+     "emotion": "confident",
+     "intensity": 0.8
+    },
+    {
+     "cue": "every",
+     "gesture": "beat_repeat",
+     "target": "viewer",
+     "emotion": "emphatic",
+     "intensity": 0.7
+    },
+    {
+     "cue": "checks",
+     "gesture": "point_at",
+     "target": "node:API",
+     "emotion": "confident",
+     "intensity": 0.7
+    },
+    {
+     "cue": "signature",
+     "gesture": "track",
+     "target": "packet:2",
+     "emotion": "satisfied",
+     "intensity": 0.8
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "layout": "presenter_center_typography",
+   "narration": "A session is a note the server keeps about you. A token is a pass you carry yourself.",
+   "onScreen": [
+    {
+     "text": "Session: the server remembers you",
+     "cue": "session"
+    },
+    {
+     "text": "Token: you carry the proof",
+     "cue": "token"
+    }
+   ],
+   "performance": [
+    {
+     "cue": "session",
+     "gesture": "point_at",
+     "target": "text:5",
+     "emotion": "thoughtful",
+     "intensity": 0.7
+    },
+    {
+     "cue": "note",
+     "gesture": "hold_palm",
+     "target": "text:0",
+     "emotion": "thoughtful",
+     "intensity": 0.6
+    },
+    {
+     "cue": "keeps",
+     "gesture": "grip",
+     "target": "text:0",
+     "emotion": "thoughtful",
+     "intensity": 0.7
+    },
+    {
+     "cue": "token",
+     "gesture": "point_at",
+     "target": "text:1",
+     "emotion": "confident",
+     "intensity": 0.8
+    },
+    {
+     "cue": "carry",
+     "gesture": "beat",
+     "target": "viewer",
+     "emotion": "confident",
+     "intensity": 0.6
+    },
+    {
+     "cue": "yourself",
+     "gesture": "point_self",
+     "target": "self",
+     "emotion": "proud",
+     "intensity": 0.7
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "layout": "presenter_center_typography",
+   "narration": "So being logged in isn't a state. It's proof you keep showing. That's how the app remembers you.",
+   "onScreen": [
+    {
+     "text": "Logged in isn't a state.",
+     "cue": "So"
+    },
+    {
+     "text": "It's proof you keep showing.",
+     "cue": "proof"
+    }
+   ],
+   "performance": [
+    {
+     "cue": "isn't",
+     "gesture": "shake_head",
+     "target": "text:0",
+     "emotion": "serious",
+     "intensity": 0.7
+    },
+    {
+     "cue": "proof",
+     "gesture": "point_at",
+     "target": "text:1",
+     "emotion": "confident",
+     "intensity": 0.8
+    },
+    {
+     "cue": "showing",
+     "gesture": "beat_repeat",
+     "target": "viewer",
+     "emotion": "emphatic",
+     "intensity": 0.7
+    },
+    {
+     "cue": "That's",
+     "gesture": "open_arms",
+     "target": "viewer",
+     "emotion": "happy",
+     "intensity": 0.9
+    },
+    {
+     "cue": "remembers",
+     "gesture": "nod",
+     "target": "viewer",
+     "emotion": "happy",
+     "intensity": 0.6
+    },
+    {
+     "atEnd": -0.8,
+     "gesture": "wave",
+     "target": "viewer",
+     "emotion": "friendly",
+     "intensity": 0.5
+    }
+   ]
+  }
+ ],
+ "pronunciation": {
+  "API": "A P I",
+  "JWT": "jay double-u tee",
+  "PostgreSQL": "post-gress Q L"
+ }
+}

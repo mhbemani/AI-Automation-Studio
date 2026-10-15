@@ -1,0 +1,39 @@
+{
+ "MAG_ring_shoot": {
+  "frames": 24,
+  "expected": 24
+ },
+ "MAG_ring_wrap": {
+  "frames": 30,
+  "expected": 30
+ },
+ "MAG_ring_fade": {
+  "frames": 18,
+  "expected": 18
+ },
+ "CLA_magic_cast": {
+  "frames": 24,
+  "expected": 24
+ },
+ "CAR_self_drive_start": {
+  "frames": 48,
+  "expected": 48
+ },
+ "shoot_end_ring_local_y": -1.2,
+ "shoot_end_scale": 1.0,
+ "wrap_end_scale": 0.7,
+ "fade_end": 0.0,
+ "sparkle_end": 0.0,
+ "car_end": {
+  "distance": 1.0,
+  "dash_glow": 1.0,
+  "steer": 0.0
+ },
+ "car_start": {
+  "distance": 0.0,
+  "dash_glow": 0.0,
+  "steer": 0.0
+ },
+ "cast_max_arm_len": 1.6,
+ "cast_first_last_diff": 0.0
+}

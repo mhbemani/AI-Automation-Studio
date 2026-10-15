@@ -1,0 +1,5 @@
+{"stage":"tts","id":"8","ok":true,"wallSec":36,"peakRssMB":552,"sysUsedBaseMB":5264,"sysUsedPeakMB":5661,"swapoutPages":0}
+{"stage":"align","id":"8","ok":true,"wallSec":3.3,"peakRssMB":378,"sysUsedBaseMB":5265,"sysUsedPeakMB":5841,"swapoutPages":0}
+{"stage":"character","id":"8","ok":true,"wallSec":626,"peakRssMB":550,"sysUsedBaseMB":5248,"sysUsedPeakMB":6644,"swapoutPages":14708,"preset":"final"}
+{"stage":"render","id":"8","ok":true,"wallSec":391.3,"peakRssMB":671,"sysUsedBaseMB":5185,"sysUsedPeakMB":6476,"swapoutPages":0}
+{"stage":"assemble","id":"8","ok":true,"wallSec":11.1,"peakRssMB":106,"sysUsedBaseMB":5102,"sysUsedPeakMB":5511,"swapoutPages":0}

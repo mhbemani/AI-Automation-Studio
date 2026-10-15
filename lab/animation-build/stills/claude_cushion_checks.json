@@ -1,0 +1,53 @@
+{
+ "CLA_cushion_jump": {
+  "frames": 61,
+  "expected": 60,
+  "loop_diff": 0.0
+ },
+ "CLA_cushion_run_carry": {
+  "frames": 17,
+  "expected": 16,
+  "loop_diff": 0.0
+ },
+ "CLA_cushion_hold_to_throw": {
+  "frames": 18,
+  "expected": 18,
+  "loop_diff": null
+ },
+ "CLA_cushion_throw_and_jump": {
+  "frames": 72,
+  "expected": 72,
+  "loop_diff": null
+ },
+ "CLA_cushion_sit": {
+  "frames": 97,
+  "expected": 96,
+  "loop_diff": 0.0
+ },
+ "CLA_cushion_sleep": {
+  "frames": 97,
+  "expected": 96,
+  "loop_diff": 0.0
+ },
+ "CLA_cushion_happy_stand": {
+  "frames": 97,
+  "expected": 96,
+  "loop_diff": 0.0
+ },
+ "CLA_stand_to_cushion_sit": {
+  "frames": 24,
+  "expected": 24,
+  "loop_diff": null
+ },
+ "throw_end": {
+  "root_z": 0.896,
+  "cushion_z": 0.78,
+  "root_minus_cushion_z": 0.116,
+  "squash": 0.0
+ },
+ "sit_f1": {
+  "root_z": 0.145,
+  "cushion_bottom_world_z": -0.0,
+  "squash": 0.609
+ }
+}

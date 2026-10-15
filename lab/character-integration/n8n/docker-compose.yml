@@ -1,0 +1,25 @@
+# copy of lab/n8n compose, n8n pinned to 2.41.7. Same project name "n8n" => reuses the existing volumes (owner account, DB).
+name: n8n
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment: {POSTGRES_USER: studio, POSTGRES_PASSWORD: studio_local, POSTGRES_DB: studio}
+    volumes: [pgdata:/var/lib/postgresql/data, "./init.sql:/docker-entrypoint-initdb.d/init.sql:ro"]
+    ports: ["127.0.0.1:5433:5432"]
+    healthcheck: {test: ["CMD-SHELL", "pg_isready -U studio"], interval: 3s, retries: 20}
+  n8n:
+    image: docker.n8n.io/n8nio/n8n:2.41.7
+    depends_on: {postgres: {condition: service_healthy}}
+    ports: ["127.0.0.1:5678:5678"]
+    environment:
+      N8N_HOST: localhost
+      WEBHOOK_URL: http://localhost:5678/
+      N8N_SECURE_COOKIE: "false"
+      N8N_RUNNERS_ENABLED: "true"
+      DB_TYPE: sqlite
+      N8N_BLOCK_ENV_ACCESS_IN_NODE: "false"   # workflow reads RUNNER_TOKEN
+      RUNNER_TOKEN: ${RUNNER_TOKEN}
+    volumes: [n8ndata:/home/node/.n8n]
+volumes:
+  pgdata: {name: n8n_pgdata, external: true}
+  n8ndata: {name: n8n_n8ndata, external: true}

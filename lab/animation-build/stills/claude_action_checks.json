@@ -1,0 +1,293 @@
+{
+ "actions": {
+  "CLA_idle": {
+   "frames": 97,
+   "range": [
+    1,
+    97
+   ],
+   "fake_user": true,
+   "expected_length": 96,
+   "length_ok": true,
+   "loop_max_diff": 0.0,
+   "outside_range": []
+  },
+  "CLA_blink": {
+   "frames": 6,
+   "range": [
+    1,
+    6
+   ],
+   "fake_user": true,
+   "expected_length": 6,
+   "length_ok": true,
+   "outside_range": []
+  },
+  "CLA_talk_pulse": {
+   "frames": 13,
+   "range": [
+    1,
+    13
+   ],
+   "fake_user": true,
+   "expected_length": 12,
+   "length_ok": true,
+   "loop_max_diff": 0.0,
+   "outside_range": []
+  },
+  "CLA_look_around": {
+   "frames": 60,
+   "range": [
+    1,
+    60
+   ],
+   "fake_user": true,
+   "expected_length": 60,
+   "length_ok": true,
+   "outside_range": []
+  },
+  "CLA_emoeyes_neutral": {
+   "frames": 8,
+   "range": [
+    1,
+    8
+   ],
+   "fake_user": true,
+   "expected_length": 8,
+   "length_ok": true,
+   "outside_range": []
+  },
+  "CLA_emobody_neutral": {
+   "frames": 16,
+   "range": [
+    1,
+    16
+   ],
+   "fake_user": true,
+   "expected_length": 16,
+   "length_ok": true,
+   "outside_range": []
+  },
+  "CLA_emoeyes_happy": {
+   "frames": 8,
+   "range": [
+    1,
+    8
+   ],
+   "fake_user": true,
+   "expected_length": 8,
+   "length_ok": true,
+   "outside_range": []
+  },
+  "CLA_emobody_happy": {
+   "frames": 16,
+   "range": [
+    1,
+    16
+   ],
+   "fake_user": true,
+   "expected_length": 16,
+   "length_ok": true,
+   "outside_range": []
+  },
+  "CLA_emoeyes_curious": {
+   "frames": 8,
+   "range": [
+    1,
+    8
+   ],
+   "fake_user": true,
+   "expected_length": 8,
+   "length_ok": true,
+   "outside_range": []
+  },
+  "CLA_emobody_curious": {
+   "frames": 16,
+   "range": [
+    1,
+    16
+   ],
+   "fake_user": true,
+   "expected_length": 16,
+   "length_ok": true,
+   "outside_range": []
+  },
+  "CLA_emoeyes_excited": {
+   "frames": 8,
+   "range": [
+    1,
+    8
+   ],
+   "fake_user": true,
+   "expected_length": 8,
+   "length_ok": true,
+   "outside_range": []
+  },
+  "CLA_emobody_excited": {
+   "frames": 16,
+   "range": [
+    1,
+    16
+   ],
+   "fake_user": true,
+   "expected_length": 16,
+   "length_ok": true,
+   "outside_range": []
+  },
+  "CLA_emoeyes_surprised": {
+   "frames": 8,
+   "range": [
+    1,
+    8
+   ],
+   "fake_user": true,
+   "expected_length": 8,
+   "length_ok": true,
+   "outside_range": []
+  },
+  "CLA_emobody_surprised": {
+   "frames": 16,
+   "range": [
+    1,
+    16
+   ],
+   "fake_user": true,
+   "expected_length": 16,
+   "length_ok": true,
+   "outside_range": []
+  },
+  "CLA_emoeyes_thoughtful": {
+   "frames": 8,
+   "range": [
+    1,
+    8
+   ],
+   "fake_user": true,
+   "expected_length": 8,
+   "length_ok": true,
+   "outside_range": []
+  },
+  "CLA_emobody_thoughtful": {
+   "frames": 16,
+   "range": [
+    1,
+    16
+   ],
+   "fake_user": true,
+   "expected_length": 16,
+   "length_ok": true,
+   "outside_range": []
+  },
+  "CLA_emoeyes_proud": {
+   "frames": 8,
+   "range": [
+    1,
+    8
+   ],
+   "fake_user": true,
+   "expected_length": 8,
+   "length_ok": true,
+   "outside_range": []
+  },
+  "CLA_emobody_proud": {
+   "frames": 16,
+   "range": [
+    1,
+    16
+   ],
+   "fake_user": true,
+   "expected_length": 16,
+   "length_ok": true,
+   "outside_range": []
+  },
+  "CLA_emoeyes_amused": {
+   "frames": 8,
+   "range": [
+    1,
+    8
+   ],
+   "fake_user": true,
+   "expected_length": 8,
+   "length_ok": true,
+   "outside_range": []
+  },
+  "CLA_emobody_amused": {
+   "frames": 16,
+   "range": [
+    1,
+    16
+   ],
+   "fake_user": true,
+   "expected_length": 16,
+   "length_ok": true,
+   "outside_range": []
+  },
+  "CLA_look_left": {
+   "frames": 6,
+   "range": [
+    1,
+    6
+   ],
+   "fake_user": true,
+   "expected_length": 6,
+   "length_ok": true,
+   "outside_range": []
+  },
+  "CLA_look_right": {
+   "frames": 6,
+   "range": [
+    1,
+    6
+   ],
+   "fake_user": true,
+   "expected_length": 6,
+   "length_ok": true,
+   "outside_range": []
+  },
+  "CLA_look_up": {
+   "frames": 6,
+   "range": [
+    1,
+    6
+   ],
+   "fake_user": true,
+   "expected_length": 6,
+   "length_ok": true,
+   "outside_range": []
+  },
+  "CLA_look_down": {
+   "frames": 6,
+   "range": [
+    1,
+    6
+   ],
+   "fake_user": true,
+   "expected_length": 6,
+   "length_ok": true,
+   "outside_range": []
+  },
+  "CLA_look_camera": {
+   "frames": 6,
+   "range": [
+    1,
+    6
+   ],
+   "fake_user": true,
+   "expected_length": 6,
+   "length_ok": true,
+   "outside_range": []
+  }
+ },
+ "problems": [],
+ "blink_eye_open": [
+  1.0,
+  0.5,
+  0.0,
+  0.2,
+  0.7,
+  1.0
+ ],
+ "blink_closed_frames(<0.25)": 2,
+ "talk_envelope_max_err": 0.0,
+ "talk_best_lag_frames": 0
+}

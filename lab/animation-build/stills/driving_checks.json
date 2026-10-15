@@ -1,0 +1,70 @@
+{
+ "CLA_drive_hold_wheel": {
+  "range": [
+   1,
+   97
+  ],
+  "length_ok": true,
+  "loop_max_diff": 0.0,
+  "hand_to_grip_error_cm": [
+   0.0,
+   0.0
+  ],
+  "arm_stretch_max": 2.2,
+  "arm_thickness_min_max_cm": [
+   11.9,
+   13.2
+  ]
+ },
+ "CLA_drive_steer_left": {
+  "range": [
+   1,
+   24
+  ],
+  "length_ok": true,
+  "hand_to_grip_error_cm": [
+   0.0,
+   0.0
+  ],
+  "arm_stretch_max": 2.22,
+  "arm_thickness_min_max_cm": [
+   11.5,
+   13.5
+  ]
+ },
+ "CLA_drive_steer_right": {
+  "range": [
+   1,
+   24
+  ],
+  "length_ok": true,
+  "hand_to_grip_error_cm": [
+   0.0,
+   0.0
+  ],
+  "arm_stretch_max": 2.25,
+  "arm_thickness_min_max_cm": [
+   12.8,
+   15.5
+  ]
+ },
+ "CLA_drive_hands_off": {
+  "range": [
+   1,
+   18
+  ],
+  "length_ok": true,
+  "arm_thickness_min_max_cm": [
+   10.3,
+   15.9
+  ]
+ },
+ "CLA_talk_arm_wiggle": {
+  "range": [
+   1,
+   37
+  ],
+  "length_ok": true,
+  "loop_max_diff": 0.0
+ }
+}

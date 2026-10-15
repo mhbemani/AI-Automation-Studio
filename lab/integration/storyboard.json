@@ -1,0 +1,33 @@
+{
+  "topic": "What happens when you click Login?",
+  "series": "How Software Actually Works",
+  "voice": { "engine": "kokoro", "main": "bf_emma", "alt": "af_heart" },
+  "targetSeconds": 45,
+  "scenes": [
+    {
+      "id": 1,
+      "type": "typography",
+      "narration": "You click Login. Nothing seems to happen. But in under a second, five different systems just talked about you.",
+      "onScreen": ["You click Login.", "5 systems. Under 1 second."]
+    },
+    {
+      "id": 2,
+      "type": "flow",
+      "narration": "Your browser sends your credentials to the server. The server looks you up in the database, and checks your password against a stored hash, never the password itself. If it matches, the server creates a token, and sends it back.",
+      "nodes": ["Browser", "API", "Database"],
+      "packets": [
+        { "from": "Browser", "to": "API", "label": "POST /login" },
+        { "from": "API", "to": "Database", "label": "find user + hash" },
+        { "from": "Database", "to": "API", "label": "stored hash" },
+        { "from": "API", "to": "Browser", "label": "token" }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "typography",
+      "narration": "From now on, your browser shows that token with every request. That's how the app remembers you are you.",
+      "onScreen": ["Every request carries proof.", "That's being logged in."]
+    }
+  ],
+  "pronunciation": { "API": "A P I", "JWT": "jay double-u tee", "PostgreSQL": "post-gress Q L" }
+}

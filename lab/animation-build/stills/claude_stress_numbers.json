@@ -1,0 +1,19 @@
+{
+ "rest": "{'arm_L_in_body_mm': 0.0, 'arm_R_in_body_mm': 0.0, 'face_parts_off_front': 0, 'body_scale_xyz': [1.0, 1.0, 1.0], 'vol': 1.0}",
+ "squash_max": "{'arm_L_in_body_mm': 0.0, 'arm_R_in_body_mm': 0.0, 'face_parts_off_front': 0, 'body_scale_xyz': [1.195, 0.7, 1.195], 'vol': 1.0}",
+ "stretch_max": "{'arm_L_in_body_mm': 0.0, 'arm_R_in_body_mm': 0.0, 'face_parts_off_front': 0, 'body_scale_xyz': [0.877, 1.3, 0.877], 'vol': 1.0}",
+ "arms_up_120": "{'arm_L_in_body_mm': 88.1, 'arm_R_in_body_mm': 88.1, 'face_parts_off_front': 0, 'body_scale_xyz': [1.0, 1.0, 1.0], 'vol': 1.0}",
+ "arms_down_-70": "{'arm_L_in_body_mm': 42.5, 'arm_R_in_body_mm': 42.5, 'face_parts_off_front': 0, 'body_scale_xyz': [1.0, 1.0, 1.0], 'vol': 1.0}",
+ "arms_fwd_90": "{'arm_L_in_body_mm': 50.0, 'arm_R_in_body_mm': 50.0, 'face_parts_off_front': 0, 'body_scale_xyz': [1.0, 1.0, 1.0], 'vol': 1.0}",
+ "arms_back_-90": "{'arm_L_in_body_mm': 50.0, 'arm_R_in_body_mm': 50.0, 'face_parts_off_front': 0, 'body_scale_xyz': [1.0, 1.0, 1.0], 'vol': 1.0}",
+ "lean_25": "{'arm_L_in_body_mm': 0.0, 'arm_R_in_body_mm': 0.0, 'face_parts_off_front': 0, 'body_scale_xyz': [1.0, 1.0, 1.0], 'vol': 1.0}",
+ "nod_25": "{'arm_L_in_body_mm': 0.0, 'arm_R_in_body_mm': 0.0, 'face_parts_off_front': 0, 'body_scale_xyz': [1.0, 1.0, 1.0], 'vol': 1.0}",
+ "nod_-25": "{'arm_L_in_body_mm': 0.0, 'arm_R_in_body_mm': 0.0, 'face_parts_off_front': 0, 'body_scale_xyz': [1.0, 1.0, 1.0], 'vol': 1.0}",
+ "turn_60": "{'arm_L_in_body_mm': 0.0, 'arm_R_in_body_mm': 0.0, 'face_parts_off_front': 0, 'body_scale_xyz': [1.0, 1.0, 1.0], 'vol': 1.0}",
+ "eyes_tall_wide": "{'arm_L_in_body_mm': 0.0, 'arm_R_in_body_mm': 0.0, 'face_parts_off_front': 0, 'body_scale_xyz': [1.0, 1.0, 1.0], 'vol': 1.0}",
+ "eyes_low_small": "{'arm_L_in_body_mm': 0.0, 'arm_R_in_body_mm': 0.0, 'face_parts_off_front': 0, 'body_scale_xyz': [1.0, 1.0, 1.0], 'vol': 1.0}",
+ "look_corner": "{'arm_L_in_body_mm': 0.0, 'arm_R_in_body_mm': 0.0, 'face_parts_off_front': 0, 'body_scale_xyz': [1.0, 1.0, 1.0], 'vol': 1.0}",
+ "eye_roll_35": "{'arm_L_in_body_mm': 0.0, 'arm_R_in_body_mm': 0.0, 'face_parts_off_front': 0, 'body_scale_xyz': [1.0, 1.0, 1.0], 'vol': 1.0}",
+ "blink": "{'arm_L_in_body_mm': 0.0, 'arm_R_in_body_mm': 0.0, 'face_parts_off_front': 0, 'body_scale_xyz': [1.0, 1.0, 1.0], 'vol': 1.0}",
+ "blush_glint": "{'arm_L_in_body_mm': 0.0, 'arm_R_in_body_mm': 0.0, 'face_parts_off_front': 0, 'body_scale_xyz': [1.0, 1.0, 1.0], 'vol': 1.0}"
+}

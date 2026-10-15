@@ -1,0 +1,428 @@
+{
+ "id": "integ001",
+ "name": "integration: storyboard -> MP4 -> approval",
+ "nodes": [
+  {
+   "id": "wh",
+   "name": "Webhook",
+   "type": "n8n-nodes-base.webhook",
+   "typeVersion": 2,
+   "position": [
+    0,
+    0
+   ],
+   "webhookId": "integ-start",
+   "parameters": {
+    "httpMethod": "POST",
+    "path": "integration",
+    "responseMode": "onReceived",
+    "options": {}
+   }
+  },
+  {
+   "id": "Insert IDEA",
+   "name": "Insert IDEA",
+   "type": "n8n-nodes-base.postgres",
+   "typeVersion": 2.5,
+   "position": [
+    200,
+    0
+   ],
+   "credentials": {
+    "postgres": {
+     "id": "labpg01",
+     "name": "studio pg"
+    }
+   },
+   "parameters": {
+    "operation": "executeQuery",
+    "query": "INSERT INTO content_items (topic,status,script) VALUES ($1,'IDEA',$2::jsonb) RETURNING id",
+    "options": {
+     "queryReplacement": "={{ [ $json.body.topic || 'untitled', JSON.stringify({storyboard: $json.body.storyboard}) ] }}"
+    }
+   }
+  },
+  {
+   "id": "Set SCRIPTING",
+   "name": "Set SCRIPTING",
+   "type": "n8n-nodes-base.postgres",
+   "typeVersion": 2.5,
+   "position": [
+    400,
+    0
+   ],
+   "credentials": {
+    "postgres": {
+     "id": "labpg01",
+     "name": "studio pg"
+    }
+   },
+   "parameters": {
+    "operation": "executeQuery",
+    "query": "UPDATE content_items SET status='SCRIPTING', updated_at=now() WHERE id=$1 RETURNING id",
+    "options": {
+     "queryReplacement": "={{ $('Insert IDEA').first().json.id }}"
+    }
+   }
+  },
+  {
+   "id": "TTS",
+   "name": "TTS",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    600,
+    0
+   ],
+   "onError": "continueErrorOutput",
+   "parameters": {
+    "method": "POST",
+    "url": "=http://host.docker.internal:8787/run/tts/{{ $('Insert IDEA').first().json.id }}?storyboard={{ encodeURIComponent($('Webhook').first().json.body.storyboard) }}",
+    "sendHeaders": true,
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "x-runner-token",
+       "value": "={{ $env.RUNNER_TOKEN }}"
+      }
+     ]
+    },
+    "options": {
+     "timeout": 900000
+    }
+   }
+  },
+  {
+   "id": "Align",
+   "name": "Align",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    800,
+    0
+   ],
+   "onError": "continueErrorOutput",
+   "parameters": {
+    "method": "POST",
+    "url": "=http://host.docker.internal:8787/run/align/{{ $('Insert IDEA').first().json.id }}",
+    "sendHeaders": true,
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "x-runner-token",
+       "value": "={{ $env.RUNNER_TOKEN }}"
+      }
+     ]
+    },
+    "options": {
+     "timeout": 900000
+    }
+   }
+  },
+  {
+   "id": "Set RENDERING",
+   "name": "Set RENDERING",
+   "type": "n8n-nodes-base.postgres",
+   "typeVersion": 2.5,
+   "position": [
+    1000,
+    0
+   ],
+   "credentials": {
+    "postgres": {
+     "id": "labpg01",
+     "name": "studio pg"
+    }
+   },
+   "parameters": {
+    "operation": "executeQuery",
+    "query": "UPDATE content_items SET status='RENDERING', updated_at=now() WHERE id=$1 RETURNING id",
+    "options": {
+     "queryReplacement": "={{ $('Insert IDEA').first().json.id }}"
+    }
+   }
+  },
+  {
+   "id": "Render",
+   "name": "Render",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    1200,
+    0
+   ],
+   "onError": "continueErrorOutput",
+   "parameters": {
+    "method": "POST",
+    "url": "=http://host.docker.internal:8787/run/render/{{ $('Insert IDEA').first().json.id }}",
+    "sendHeaders": true,
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "x-runner-token",
+       "value": "={{ $env.RUNNER_TOKEN }}"
+      }
+     ]
+    },
+    "options": {
+     "timeout": 900000
+    }
+   }
+  },
+  {
+   "id": "Assemble",
+   "name": "Assemble",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    1400,
+    0
+   ],
+   "onError": "continueErrorOutput",
+   "parameters": {
+    "method": "POST",
+    "url": "=http://host.docker.internal:8787/run/assemble/{{ $('Insert IDEA').first().json.id }}",
+    "sendHeaders": true,
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "x-runner-token",
+       "value": "={{ $env.RUNNER_TOKEN }}"
+      }
+     ]
+    },
+    "options": {
+     "timeout": 900000
+    }
+   }
+  },
+  {
+   "id": "Set AWAITING_APPROVAL",
+   "name": "Set AWAITING_APPROVAL",
+   "type": "n8n-nodes-base.postgres",
+   "typeVersion": 2.5,
+   "position": [
+    1600,
+    0
+   ],
+   "credentials": {
+    "postgres": {
+     "id": "labpg01",
+     "name": "studio pg"
+    }
+   },
+   "parameters": {
+    "operation": "executeQuery",
+    "query": "UPDATE content_items SET status='AWAITING_APPROVAL', updated_at=now(), note=$2 WHERE id=$1 RETURNING id",
+    "options": {
+     "queryReplacement": "={{ [ $('Insert IDEA').first().json.id, $execution.resumeUrl ] }}"
+    }
+   }
+  },
+  {
+   "id": "wait",
+   "name": "Wait for approval",
+   "type": "n8n-nodes-base.wait",
+   "typeVersion": 1.1,
+   "position": [
+    1800,
+    0
+   ],
+   "webhookId": "integ-approve",
+   "parameters": {
+    "resume": "webhook",
+    "httpMethod": "POST",
+    "options": {}
+   }
+  },
+  {
+   "id": "Set APPROVED",
+   "name": "Set APPROVED",
+   "type": "n8n-nodes-base.postgres",
+   "typeVersion": 2.5,
+   "position": [
+    2000,
+    0
+   ],
+   "credentials": {
+    "postgres": {
+     "id": "labpg01",
+     "name": "studio pg"
+    }
+   },
+   "parameters": {
+    "operation": "executeQuery",
+    "query": "UPDATE content_items SET status='APPROVED', updated_at=now() WHERE id=$1 RETURNING id",
+    "options": {
+     "queryReplacement": "={{ $('Insert IDEA').first().json.id }}"
+    }
+   }
+  },
+  {
+   "id": "Mark FAILED",
+   "name": "Mark FAILED",
+   "type": "n8n-nodes-base.postgres",
+   "typeVersion": 2.5,
+   "position": [
+    1000,
+    300
+   ],
+   "credentials": {
+    "postgres": {
+     "id": "labpg01",
+     "name": "studio pg"
+    }
+   },
+   "parameters": {
+    "operation": "executeQuery",
+    "query": "UPDATE content_items SET status='FAILED', updated_at=now(), note=$2 WHERE id=$1 RETURNING id",
+    "options": {
+     "queryReplacement": "={{ [ $('Insert IDEA').first().json.id, JSON.stringify($json).slice(0,1500) ] }}"
+    }
+   }
+  }
+ ],
+ "connections": {
+  "Webhook": {
+   "main": [
+    [
+     {
+      "node": "Insert IDEA",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Insert IDEA": {
+   "main": [
+    [
+     {
+      "node": "Set SCRIPTING",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Set SCRIPTING": {
+   "main": [
+    [
+     {
+      "node": "TTS",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "TTS": {
+   "main": [
+    [
+     {
+      "node": "Align",
+      "type": "main",
+      "index": 0
+     }
+    ],
+    [
+     {
+      "node": "Mark FAILED",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Align": {
+   "main": [
+    [
+     {
+      "node": "Set RENDERING",
+      "type": "main",
+      "index": 0
+     }
+    ],
+    [
+     {
+      "node": "Mark FAILED",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Set RENDERING": {
+   "main": [
+    [
+     {
+      "node": "Render",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Render": {
+   "main": [
+    [
+     {
+      "node": "Assemble",
+      "type": "main",
+      "index": 0
+     }
+    ],
+    [
+     {
+      "node": "Mark FAILED",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Assemble": {
+   "main": [
+    [
+     {
+      "node": "Set AWAITING_APPROVAL",
+      "type": "main",
+      "index": 0
+     }
+    ],
+    [
+     {
+      "node": "Mark FAILED",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Set AWAITING_APPROVAL": {
+   "main": [
+    [
+     {
+      "node": "Wait for approval",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Wait for approval": {
+   "main": [
+    [
+     {
+      "node": "Set APPROVED",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  }
+ },
+ "settings": {
+  "executionOrder": "v1"
+ }
+}

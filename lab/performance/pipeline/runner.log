@@ -1,0 +1,17 @@
+runner on 127.0.0.1:8790
+{"stage":"tts","id":"9","ok":true,"wallSec":31.2,"peakRssMB":518,"sysUsedBaseMB":5204,"sysUsedPeakMB":5529,"swapoutPages":0}
+{"stage":"align","id":"9","ok":true,"wallSec":2.9,"peakRssMB":375,"sysUsedBaseMB":5098,"sysUsedPeakMB":5885,"swapoutPages":0}
+{"stage":"performance","id":"9","ok":true,"wallSec":216.3,"peakRssMB":362,"sysUsedBaseMB":5352,"sysUsedPeakMB":6676,"swapoutPages":9820,"preset":"draft","aspects":"16:9"}
+{"stage":"render","id":"9","ok":true,"wallSec":47.2,"peakRssMB":677,"sysUsedBaseMB":4767,"sysUsedPeakMB":5993,"swapoutPages":0}
+{"stage":"assemble","id":"9","ok":true,"wallSec":12.7,"peakRssMB":105,"sysUsedBaseMB":5040,"sysUsedPeakMB":5140,"swapoutPages":0}
+{"stage":"tts","id":"99","ok":false,"wallSec":0.2,"peakRssMB":48,"sysUsedBaseMB":5119,"sysUsedPeakMB":5123,"swapoutPages":0}
+{"stage":"tts","id":"10","ok":true,"wallSec":30.8,"peakRssMB":552,"sysUsedBaseMB":5347,"sysUsedPeakMB":5401,"swapoutPages":0}
+{"stage":"align","id":"10","ok":true,"wallSec":2.9,"peakRssMB":374,"sysUsedBaseMB":5051,"sysUsedPeakMB":5576,"swapoutPages":0}
+{"stage":"performance","id":"10","ok":true,"wallSec":1195.3,"peakRssMB":362,"sysUsedBaseMB":4994,"sysUsedPeakMB":6791,"swapoutPages":155392,"preset":"final","aspects":"16:9,9:16"}
+{"stage":"render","id":"10","ok":true,"wallSec":165.1,"peakRssMB":684,"sysUsedBaseMB":4997,"sysUsedPeakMB":6116,"swapoutPages":0}
+{"stage":"assemble","id":"10","ok":true,"wallSec":19.3,"peakRssMB":103,"sysUsedBaseMB":5039,"sysUsedPeakMB":5408,"swapoutPages":0}
+{"stage":"tts","id":"11","ok":true,"wallSec":33.5,"peakRssMB":525,"sysUsedBaseMB":5236,"sysUsedPeakMB":5535,"swapoutPages":0}
+{"stage":"align","id":"11","ok":true,"wallSec":3.2,"peakRssMB":376,"sysUsedBaseMB":5171,"sysUsedPeakMB":5845,"swapoutPages":0}
+{"stage":"performance","id":"11","ok":true,"wallSec":220,"peakRssMB":366,"sysUsedBaseMB":5310,"sysUsedPeakMB":6624,"swapoutPages":4580,"preset":"draft","aspects":"16:9"}
+{"stage":"render","id":"11","ok":true,"wallSec":87,"peakRssMB":676,"sysUsedBaseMB":4978,"sysUsedPeakMB":6048,"swapoutPages":0}
+{"stage":"assemble","id":"11","ok":true,"wallSec":15.9,"peakRssMB":103,"sysUsedBaseMB":5073,"sysUsedPeakMB":5205,"swapoutPages":0}

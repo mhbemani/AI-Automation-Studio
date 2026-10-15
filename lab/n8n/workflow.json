@@ -1,0 +1,27 @@
+{
+  "id": "labcontent01",
+  "name": "lab: topic -> content_items -> local script",
+  "active": true,
+  "nodes": [
+    {"id":"n1","name":"Webhook","type":"n8n-nodes-base.webhook","typeVersion":2,"position":[0,0],
+     "webhookId":"lab-content","parameters":{"httpMethod":"POST","path":"content","responseMode":"lastNode","options":{}}},
+    {"id":"n2","name":"Insert IDEA","type":"n8n-nodes-base.postgres","typeVersion":2.5,"position":[220,0],
+     "credentials":{"postgres":{"id":"labpg01","name":"studio pg"}},
+     "parameters":{"operation":"executeQuery",
+       "query":"INSERT INTO content_items (topic, status) VALUES ($1, 'IDEA') RETURNING id, topic",
+       "options":{"queryReplacement":"={{ $json.body.topic }}"}}},
+    {"id":"n3","name":"Run local script","type":"n8n-nodes-base.executeCommand","typeVersion":1,"position":[440,0],
+     "parameters":{"command":"=/work/fake_render.sh {{ $json.id }} '{{ $json.topic.replace(/[^A-Za-z0-9 _-]/g,'') }}' && cat /work/item_{{ $json.id }}.json"}},
+    {"id":"n4","name":"Update RENDERING","type":"n8n-nodes-base.postgres","typeVersion":2.5,"position":[660,0],
+     "credentials":{"postgres":{"id":"labpg01","name":"studio pg"}},
+     "parameters":{"operation":"executeQuery",
+       "query":"UPDATE content_items SET status='RENDERING', updated_at=now(), script=$2::jsonb WHERE id=$1 RETURNING *",
+       "options":{"queryReplacement":"={{ [ $('Insert IDEA').item.json.id, $json.stdout.trim() ] }}"}}}
+  ],
+  "connections": {
+    "Webhook":{"main":[[{"node":"Insert IDEA","type":"main","index":0}]]},
+    "Insert IDEA":{"main":[[{"node":"Run local script","type":"main","index":0}]]},
+    "Run local script":{"main":[[{"node":"Update RENDERING","type":"main","index":0}]]}
+  },
+  "settings":{"executionOrder":"v1"}
+}

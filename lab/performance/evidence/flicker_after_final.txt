@@ -1,0 +1,7 @@
+FINAL png seq 16:9 (alpha)         frames 1266  d1 mean 1.391 median 0.921 max 9.08 | rough 0.18 dups 2 | spikes 1 520(x2.7)
+FINAL png seq 16:9 (luma)          frames 1266  d1 mean 1.427 median 1.035 max 9.03 | rough 0.17 dups 1 | spikes 1 520(x2.6)
+FINAL png seq 9:16 (alpha)         frames 1266  d1 mean 1.288 median 0.880 max 9.44 | rough 0.20 dups 3 | spikes 2 520(x2.6), 522(x2.5)
+NEW final.mp4 char region s2-3     frames  411  d1 mean 2.064 median 1.508 max 10.39 | rough 0.17 dups 0 | spikes 0 
+OLD final.mp4 char region s2-3     frames  411  d1 mean 4.170 median 2.957 max 16.93 | rough 0.46 dups 5 | spikes 17 218(x3.5), 234(x4.0), 240(x3.6), 245(x2.8), 326(x2.7), 361(x2.9), 391(x3.3), 423(x3.0), 441(x3.2), 446(x2.9), 450(x2.9), 470(x3.1)
+NEW vertical char region s2-3      frames  411  d1 mean 1.083 median 0.863 max 4.50 | rough 0.18 dups 0 | spikes 0 
+OLD vertical char region s2-3      frames  411  d1 mean 1.920 median 1.310 max 7.78 | rough 0.45 dups 8 | spikes 14 283(x2.6), 351(x3.1), 404(x4.6), 406(x5.0), 409(x3.1), 441(x3.8), 446(x2.7), 478(x2.8), 505(x4.2), 562(x4.6), 564(x2.6), 567(x2.6)

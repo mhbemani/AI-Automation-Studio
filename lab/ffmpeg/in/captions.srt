@@ -1,0 +1,11 @@
+1
+00:00:00,300 --> 00:00:03,500
+Every time you open a website,
+
+2
+00:00:03,600 --> 00:00:06,500
+your browser sends a request to a server.
+
+3
+00:00:06,700 --> 00:00:08,200
+The server answers with a page.

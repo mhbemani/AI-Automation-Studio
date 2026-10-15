@@ -1,0 +1,9 @@
+assets
+previews/
+backups/
+*.blend1
+production/voices/
+.venv/
+work/
+out/
+samples/

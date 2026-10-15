@@ -1,0 +1,141 @@
+.DS_Store
+node_modules/
+.venv/
+__pycache__/
+
+# secrets
+.env
+.env.*
+**/cred*.json
+
+# heavy / generated media and models
+models/
+out/
+work/
+*.mp4
+*.mov
+*.wav
+*.mp3
+*.blend1
+*.onnx
+*.bin
+*.safetensors
+*.pt
+
+# local runtime data (docker volumes)
+pgdata/
+n8n_data/
+lab/character/remotion-test/public/
+
+# car-scene: live-bridge token and downloaded third-party assets (see lab/scene-lowpoly-car/ASSETS.md)
+lab/scene-lowpoly-car/bridge/.token
+lab/scene-lowpoly-car/assets/
+lab/scene-lowpoly-car/previews/
+lab/scene-lowpoly-car/backups/
+lab/scene-lowpoly-car/production/out/
+lab/scene-lowpoly-car/production/.venv/
+lab/scene-lowpoly-car/scene.blend
+lab/scene-lowpoly-car/scene.blend1
+
+# scene-realistic-car (same layout as scene-lowpoly-car)
+lab/scene-realistic-car/bridge/.token
+lab/scene-realistic-car/assets/
+lab/scene-realistic-car/previews/
+lab/scene-realistic-car/backups/
+lab/scene-realistic-car/scene.blend
+lab/scene-realistic-car/scene.blend1
+lab/scene-realistic-car/production/out/
+
+# human-rig lab
+lab/human-rig/bridge/.token
+lab/human-rig/backups/
+lab/human-rig/previews/
+lab/human-rig/*.blend
+lab/human-rig/*.blend1
+
+# human-rig integration test: link to the scene production folder (read-only use) and renders
+lab/human-rig/production
+lab/human-rig/integration/out/
+
+# character-selection lab
+lab/character-selection/assets/
+lab/character-selection/scene_test.blend
+lab/character-selection/*.blend1
+lab/character-selection/previews/
+lab/character-selection/backups/
+
+# asset-lineup lab
+lab/asset-lineup/lineup.blend
+lab/asset-lineup/*.blend1
+lab/asset-lineup/snapshots/
+lab/asset-lineup/previews/
+lab/asset-lineup/backups/
+lab/asset-lineup/*.blend
+
+# asset-lineup: the built file, snapshot of the selection lab file, previews and backups stay out of git (scripts, notes and stills are committed)
+lab/asset-lineup/lineup.blend
+lab/asset-lineup/lineup.blend1
+lab/asset-lineup/snapshots/
+lab/asset-lineup/previews/
+lab/asset-lineup/backups/
+
+# archives of heavy files (re-extractable)
+archive/
+
+lab/character-selection/snapshots/
+lab/character-selection/*.blend
+
+# animation-build lab
+lab/animation-build/*.blend
+lab/animation-build/*.blend1
+lab/animation-build/snapshots/
+lab/animation-build/previews/*
+!lab/animation-build/previews/reel_*.mp4
+lab/animation-build/backups/
+lab/animation-library/*.blend
+
+# animation-build: bridge token
+lab/animation-build/bridge/.token
+lab/animation-build/contract_test/*.blend
+lab/animation-build/contract_test/*.blend1
+
+# ---- publish safety (before the first public push) ----
+# local agent rules/config (kept on this machine)
+.claude/
+CLAUDE.md
+# 3D / audio / archives in ANY lab: own-made big files go to a GitHub Release, finished videos to YouTube
+*.blend
+*.fbx
+*.glb
+*.gltf
+*.obj
+*.psd
+*.zip
+*.tar.gz
+*.mkv
+*.m4a
+*.aac
+*.flac
+# voice material and trained voice models: people's voices never leave the machine
+voices/
+voice-samples/
+GPT_weights*/
+SoVITS_weights*/
+*.ckpt
+*.pth
+# secrets
+*.pem
+*.key
+.token
+credentials*
+# small demo clips for the README are the one media exception
+!docs/media/
+!docs/media/*.mp4
+
+*.blend
+
+lab/animation-build/previews/
+*.mp4
+
+# release staging (zips and checksums are attached to releases, never committed)
+dist/

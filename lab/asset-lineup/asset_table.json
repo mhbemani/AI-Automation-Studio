@@ -1,0 +1,156 @@
+[
+ {
+  "key": "NEW_Claude",
+  "label": "Claude",
+  "tris": 1656,
+  "objects": 11,
+  "dims": [
+   0.572,
+   0.647,
+   0.819
+  ],
+  "tex": {},
+  "source": "lab/scene-realistic-car/scene.blend",
+  "orig": "CHAR_Claude"
+ },
+ {
+  "key": "NEW_Car",
+  "label": "Hero car",
+  "tris": 11083,
+  "objects": 20,
+  "dims": [
+   5.025,
+   2.016,
+   1.335
+  ],
+  "tex": {
+   "brown_leather_diff_1k.jpg": [
+    1024,
+    1024
+   ],
+   "brown_leather_rough_1k.jpg": [
+    1024,
+    1024
+   ],
+   "brown_leather_nor_gl_1k.jpg": [
+    1024,
+    1024
+   ]
+  },
+  "source": "lab/scene-realistic-car/scene.blend",
+  "orig": "CAR_Exterior"
+ },
+ {
+  "key": "NEW_Phone",
+  "label": "Phone",
+  "tris": 430,
+  "objects": 38,
+  "dims": [
+   0.074,
+   0.048,
+   0.147
+  ],
+  "tex": {},
+  "source": "lab/scene-realistic-car/scene.blend",
+  "orig": "PROP_Phone"
+ },
+ {
+  "key": "NEW_ParkedCar",
+  "label": "Parked car",
+  "tris": 7606,
+  "objects": 1,
+  "dims": [
+   4.871,
+   2.057,
+   1.451
+  ],
+  "tex": {
+   "CarPlate.001": [
+    1536,
+    1024
+   ]
+  },
+  "source": "lab/scene-realistic-car/scene.blend",
+  "orig": "CITY_ParkedCar_00"
+ },
+ {
+  "key": "OLD_Claude",
+  "label": "Claude",
+  "tris": 972,
+  "objects": 11,
+  "dims": [
+   0.6,
+   0.746,
+   0.963
+  ],
+  "tex": {},
+  "source": "lab/scene-lowpoly-car/scene.blend",
+  "orig": "CHAR_Claude"
+ },
+ {
+  "key": "OLD_Car",
+  "label": "Car",
+  "tris": 2440,
+  "objects": 23,
+  "dims": [
+   4.59,
+   2.7,
+   2.557
+  ],
+  "tex": {
+   "colormap": [
+    512,
+    512
+   ]
+  },
+  "source": "lab/scene-lowpoly-car/scene.blend",
+  "orig": "CAR_Exterior"
+ },
+ {
+  "key": "OLD_Phone",
+  "label": "Phone",
+  "tris": 122,
+  "objects": 29,
+  "dims": [
+   0.075,
+   0.05,
+   0.148
+  ],
+  "tex": {},
+  "source": "lab/scene-lowpoly-car/scene.blend",
+  "orig": "PROP_Phone"
+ },
+ {
+  "key": "OLD_Human",
+  "label": "Human (low-poly)",
+  "tris": 1578,
+  "objects": 2,
+  "dims": [
+   0.746,
+   0.799,
+   1.842
+  ],
+  "tex": {
+   "ClothedLightSkin.png": [
+    32,
+    32
+   ]
+  },
+  "source": "lab/scene-lowpoly-car/scene.blend",
+  "orig": "CHAR_Human_Street"
+ },
+ {
+  "key": "NEW_Human",
+  "label": "Human (scan)",
+  "tris": 4016,
+  "objects": 2,
+  "dims": [
+   1.21,
+   0.452,
+   1.908
+  ],
+  "tex": {},
+  "source": "lab/asset-lineup/snapshots/human_snapshot.blend",
+  "orig": "RIG_Human + HUM_Body"
+ }
+]

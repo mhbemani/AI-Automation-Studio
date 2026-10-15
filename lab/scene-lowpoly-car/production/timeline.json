@@ -1,0 +1,1143 @@
+{
+ "meta": {
+  "fps": 24,
+  "totalFrames": 1335,
+  "totalSeconds": 55.625,
+  "firstFrame": 1,
+  "frameRanges": "[startFrame, endFrame) end exclusive",
+  "dialogue": "dialogue_v1.json",
+  "voices": {
+   "claude": {
+    "engine": "kokoro",
+    "voice": "bf_emma",
+    "speed": 0.95
+   },
+   "human": {
+    "engine": "kokoro",
+    "voice": "am_michael",
+    "speed": 0.95
+   }
+  },
+  "pronunciation": {
+   "API": "A P I",
+   "Login": "log in"
+  },
+  "gapBetweenLinesSec": 0.35,
+  "leadInSec": 0.5,
+  "tailSec": 1.0,
+  "minHoldFrames": 29,
+  "tools": {
+   "kokoro-onnx": "0.4.7",
+   "onnxruntime": "1.30.0",
+   "kokoroModel": "kokoro-v1.0.int8.onnx",
+   "whisper": "whisper-cli (ggml-base.en.bin)",
+   "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers"
+  }
+ },
+ "shots": [
+  {
+   "id": "S01",
+   "shot": "EST",
+   "camera": "CAM_EST_Street",
+   "startFrame": 1,
+   "endFrame": 97
+  },
+  {
+   "id": "S02",
+   "shot": "PHONE",
+   "camera": "CAM_PHONE_CU",
+   "startFrame": 97,
+   "endFrame": 181
+  },
+  {
+   "id": "S03",
+   "shot": "EST",
+   "camera": "CAM_EST_Street",
+   "startFrame": 181,
+   "endFrame": 277
+  },
+  {
+   "id": "S04",
+   "shot": "INT",
+   "camera": "CAM_HUMAN_POV",
+   "startFrame": 277,
+   "endFrame": 330
+  },
+  {
+   "id": "S05",
+   "shot": "INT",
+   "camera": "CAM_CLAUDE_POV",
+   "startFrame": 330,
+   "endFrame": 469
+  },
+  {
+   "id": "S06",
+   "shot": "INT",
+   "camera": "CAM_HUMAN_POV",
+   "startFrame": 469,
+   "endFrame": 600
+  },
+  {
+   "id": "S07",
+   "shot": "INT",
+   "camera": "CAM_CLAUDE_POV",
+   "startFrame": 600,
+   "endFrame": 655
+  },
+  {
+   "id": "S08",
+   "shot": "INT",
+   "camera": "CAM_HUMAN_POV",
+   "startFrame": 655,
+   "endFrame": 816
+  },
+  {
+   "id": "S09",
+   "shot": "INT",
+   "camera": "CAM_CLAUDE_POV",
+   "startFrame": 816,
+   "endFrame": 863
+  },
+  {
+   "id": "S10",
+   "shot": "INT",
+   "camera": "CAM_HUMAN_POV",
+   "startFrame": 863,
+   "endFrame": 1037
+  },
+  {
+   "id": "S11",
+   "shot": "INT",
+   "camera": "CAM_CLAUDE_POV",
+   "startFrame": 1037,
+   "endFrame": 1095
+  },
+  {
+   "id": "S12",
+   "shot": "INT",
+   "camera": "CAM_HUMAN_POV",
+   "startFrame": 1095,
+   "endFrame": 1189
+  },
+  {
+   "id": "S13",
+   "shot": "INT",
+   "camera": "CAM_CLAUDE_POV",
+   "startFrame": 1189,
+   "endFrame": 1235
+  },
+  {
+   "id": "S14",
+   "shot": "INT",
+   "camera": "CAM_HUMAN_POV",
+   "startFrame": 1235,
+   "endFrame": 1336
+  }
+ ],
+ "lines": [
+  {
+   "id": 1,
+   "speaker": "claude",
+   "emotion": "happy",
+   "text": "Hop in. Home, right?",
+   "startFrame": 289,
+   "endFrame": 322,
+   "words": [
+    {
+     "w": "Hop",
+     "startFrame": 289,
+     "endFrame": 292
+    },
+    {
+     "w": "in.",
+     "startFrame": 292,
+     "endFrame": 296
+    },
+    {
+     "w": "Home,",
+     "startFrame": 300,
+     "endFrame": 306
+    },
+    {
+     "w": "right?",
+     "startFrame": 306,
+     "endFrame": 319
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "speaker": "human",
+   "emotion": "curious",
+   "text": "Yeah. Hey, quick question while we drive. What actually happens when I click Login?",
+   "startFrame": 330,
+   "endFrame": 461,
+   "words": [
+    {
+     "w": "Yeah.",
+     "startFrame": 330,
+     "endFrame": 342
+    },
+    {
+     "w": "Hey,",
+     "startFrame": 342,
+     "endFrame": 348
+    },
+    {
+     "w": "quick",
+     "startFrame": 348,
+     "endFrame": 358
+    },
+    {
+     "w": "question",
+     "startFrame": 358,
+     "endFrame": 372
+    },
+    {
+     "w": "while",
+     "startFrame": 372,
+     "endFrame": 380
+    },
+    {
+     "w": "we",
+     "startFrame": 380,
+     "endFrame": 383
+    },
+    {
+     "w": "drive.",
+     "startFrame": 383,
+     "endFrame": 400
+    },
+    {
+     "w": "What",
+     "startFrame": 400,
+     "endFrame": 406
+    },
+    {
+     "w": "actually",
+     "startFrame": 406,
+     "endFrame": 421
+    },
+    {
+     "w": "happens",
+     "startFrame": 421,
+     "endFrame": 430
+    },
+    {
+     "w": "when",
+     "startFrame": 430,
+     "endFrame": 437
+    },
+    {
+     "w": "I",
+     "startFrame": 437,
+     "endFrame": 438
+    },
+    {
+     "w": "click",
+     "startFrame": 438,
+     "endFrame": 446
+    },
+    {
+     "w": "Login?",
+     "startFrame": 446,
+     "endFrame": 460
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "speaker": "claude",
+   "emotion": "excited",
+   "text": "Ooh, good one. Picture your browser handing a note to the server. Your email, and your password.",
+   "startFrame": 469,
+   "endFrame": 592,
+   "words": [
+    {
+     "w": "Ooh,",
+     "startFrame": 469,
+     "endFrame": 472
+    },
+    {
+     "w": "good",
+     "startFrame": 472,
+     "endFrame": 478
+    },
+    {
+     "w": "one.",
+     "startFrame": 478,
+     "endFrame": 485
+    },
+    {
+     "w": "Picture",
+     "startFrame": 485,
+     "endFrame": 494
+    },
+    {
+     "w": "your",
+     "startFrame": 494,
+     "endFrame": 500
+    },
+    {
+     "w": "browser",
+     "startFrame": 500,
+     "endFrame": 511
+    },
+    {
+     "w": "handing",
+     "startFrame": 511,
+     "endFrame": 520
+    },
+    {
+     "w": "a",
+     "startFrame": 520,
+     "endFrame": 521
+    },
+    {
+     "w": "note",
+     "startFrame": 521,
+     "endFrame": 526
+    },
+    {
+     "w": "to",
+     "startFrame": 526,
+     "endFrame": 531
+    },
+    {
+     "w": "the",
+     "startFrame": 531,
+     "endFrame": 539
+    },
+    {
+     "w": "server.",
+     "startFrame": 539,
+     "endFrame": 554
+    },
+    {
+     "w": "Your",
+     "startFrame": 554,
+     "endFrame": 559
+    },
+    {
+     "w": "email,",
+     "startFrame": 559,
+     "endFrame": 566
+    },
+    {
+     "w": "and",
+     "startFrame": 566,
+     "endFrame": 570
+    },
+    {
+     "w": "your",
+     "startFrame": 570,
+     "endFrame": 575
+    },
+    {
+     "w": "password.",
+     "startFrame": 575,
+     "endFrame": 590
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "speaker": "human",
+   "emotion": "surprised",
+   "text": "Wait, it just sends my password?",
+   "startFrame": 600,
+   "endFrame": 647,
+   "words": [
+    {
+     "w": "Wait,",
+     "startFrame": 600,
+     "endFrame": 610
+    },
+    {
+     "w": "it",
+     "startFrame": 610,
+     "endFrame": 613
+    },
+    {
+     "w": "just",
+     "startFrame": 613,
+     "endFrame": 620
+    },
+    {
+     "w": "sends",
+     "startFrame": 620,
+     "endFrame": 629
+    },
+    {
+     "w": "my",
+     "startFrame": 629,
+     "endFrame": 632
+    },
+    {
+     "w": "password?",
+     "startFrame": 632,
+     "endFrame": 646
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "speaker": "claude",
+   "emotion": "thoughtful",
+   "text": "Over an encrypted connection, yes. And the server never stores it. Only a scrambled fingerprint, called a hash.",
+   "startFrame": 655,
+   "endFrame": 808,
+   "words": [
+    {
+     "w": "Over",
+     "startFrame": 655,
+     "endFrame": 661
+    },
+    {
+     "w": "an",
+     "startFrame": 661,
+     "endFrame": 664
+    },
+    {
+     "w": "encrypted",
+     "startFrame": 664,
+     "endFrame": 678
+    },
+    {
+     "w": "connection,",
+     "startFrame": 678,
+     "endFrame": 697
+    },
+    {
+     "w": "yes.",
+     "startFrame": 697,
+     "endFrame": 706
+    },
+    {
+     "w": "And",
+     "startFrame": 706,
+     "endFrame": 713
+    },
+    {
+     "w": "the",
+     "startFrame": 713,
+     "endFrame": 716
+    },
+    {
+     "w": "server",
+     "startFrame": 716,
+     "endFrame": 726
+    },
+    {
+     "w": "never",
+     "startFrame": 726,
+     "endFrame": 736
+    },
+    {
+     "w": "stores",
+     "startFrame": 736,
+     "endFrame": 751
+    },
+    {
+     "w": "it.",
+     "startFrame": 751,
+     "endFrame": 752
+    },
+    {
+     "w": "Only",
+     "startFrame": 751,
+     "endFrame": 757
+    },
+    {
+     "w": "a",
+     "startFrame": 757,
+     "endFrame": 758
+    },
+    {
+     "w": "scrambled",
+     "startFrame": 758,
+     "endFrame": 772
+    },
+    {
+     "w": "fingerprint,",
+     "startFrame": 772,
+     "endFrame": 788
+    },
+    {
+     "w": "called",
+     "startFrame": 788,
+     "endFrame": 796
+    },
+    {
+     "w": "a",
+     "startFrame": 796,
+     "endFrame": 802
+    },
+    {
+     "w": "hash.",
+     "startFrame": 802,
+     "endFrame": 807
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "speaker": "human",
+   "emotion": "curious",
+   "text": "So how does it check it's me?",
+   "startFrame": 816,
+   "endFrame": 855,
+   "words": [
+    {
+     "w": "So",
+     "startFrame": 817,
+     "endFrame": 819
+    },
+    {
+     "w": "how",
+     "startFrame": 819,
+     "endFrame": 824
+    },
+    {
+     "w": "does",
+     "startFrame": 824,
+     "endFrame": 830
+    },
+    {
+     "w": "it",
+     "startFrame": 830,
+     "endFrame": 834
+    },
+    {
+     "w": "check",
+     "startFrame": 834,
+     "endFrame": 842
+    },
+    {
+     "w": "it's",
+     "startFrame": 842,
+     "endFrame": 848
+    },
+    {
+     "w": "me?",
+     "startFrame": 848,
+     "endFrame": 854
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "speaker": "claude",
+   "emotion": "proud",
+   "text": "It scrambles what you typed and compares the fingerprints. A match, and you're in. Then it hands you a token, like a signed pass.",
+   "startFrame": 863,
+   "endFrame": 1029,
+   "words": [
+    {
+     "w": "It",
+     "startFrame": 863,
+     "endFrame": 866
+    },
+    {
+     "w": "scrambles",
+     "startFrame": 866,
+     "endFrame": 879
+    },
+    {
+     "w": "what",
+     "startFrame": 879,
+     "endFrame": 886
+    },
+    {
+     "w": "you",
+     "startFrame": 886,
+     "endFrame": 889
+    },
+    {
+     "w": "typed",
+     "startFrame": 889,
+     "endFrame": 897
+    },
+    {
+     "w": "and",
+     "startFrame": 897,
+     "endFrame": 901
+    },
+    {
+     "w": "compares",
+     "startFrame": 901,
+     "endFrame": 913
+    },
+    {
+     "w": "the",
+     "startFrame": 913,
+     "endFrame": 918
+    },
+    {
+     "w": "fingerprints.",
+     "startFrame": 918,
+     "endFrame": 937
+    },
+    {
+     "w": "A",
+     "startFrame": 937,
+     "endFrame": 940
+    },
+    {
+     "w": "match,",
+     "startFrame": 940,
+     "endFrame": 950
+    },
+    {
+     "w": "and",
+     "startFrame": 950,
+     "endFrame": 957
+    },
+    {
+     "w": "you're",
+     "startFrame": 957,
+     "endFrame": 969
+    },
+    {
+     "w": "in.",
+     "startFrame": 969,
+     "endFrame": 977
+    },
+    {
+     "w": "Then",
+     "startFrame": 977,
+     "endFrame": 981
+    },
+    {
+     "w": "it",
+     "startFrame": 981,
+     "endFrame": 983
+    },
+    {
+     "w": "hands",
+     "startFrame": 983,
+     "endFrame": 989
+    },
+    {
+     "w": "you",
+     "startFrame": 989,
+     "endFrame": 992
+    },
+    {
+     "w": "a",
+     "startFrame": 992,
+     "endFrame": 993
+    },
+    {
+     "w": "token,",
+     "startFrame": 993,
+     "endFrame": 1000
+    },
+    {
+     "w": "like",
+     "startFrame": 1000,
+     "endFrame": 1001
+    },
+    {
+     "w": "a",
+     "startFrame": 1001,
+     "endFrame": 1013
+    },
+    {
+     "w": "signed",
+     "startFrame": 1013,
+     "endFrame": 1016
+    },
+    {
+     "w": "pass.",
+     "startFrame": 1016,
+     "endFrame": 1027
+    }
+   ]
+  },
+  {
+   "id": 8,
+   "speaker": "human",
+   "emotion": "curious",
+   "text": "And I just show that pass every time?",
+   "startFrame": 1037,
+   "endFrame": 1087,
+   "words": [
+    {
+     "w": "And",
+     "startFrame": 1037,
+     "endFrame": 1041
+    },
+    {
+     "w": "I",
+     "startFrame": 1041,
+     "endFrame": 1043
+    },
+    {
+     "w": "just",
+     "startFrame": 1043,
+     "endFrame": 1049
+    },
+    {
+     "w": "show",
+     "startFrame": 1049,
+     "endFrame": 1056
+    },
+    {
+     "w": "that",
+     "startFrame": 1056,
+     "endFrame": 1062
+    },
+    {
+     "w": "pass",
+     "startFrame": 1062,
+     "endFrame": 1069
+    },
+    {
+     "w": "every",
+     "startFrame": 1069,
+     "endFrame": 1077
+    },
+    {
+     "w": "time?",
+     "startFrame": 1077,
+     "endFrame": 1086
+    }
+   ]
+  },
+  {
+   "id": 9,
+   "speaker": "claude",
+   "emotion": "happy",
+   "text": "Every request. That's all being logged in is. Proof you keep showing.",
+   "startFrame": 1095,
+   "endFrame": 1181,
+   "words": [
+    {
+     "w": "Every",
+     "startFrame": 1095,
+     "endFrame": 1102
+    },
+    {
+     "w": "request.",
+     "startFrame": 1102,
+     "endFrame": 1121
+    },
+    {
+     "w": "That's",
+     "startFrame": 1121,
+     "endFrame": 1126
+    },
+    {
+     "w": "all",
+     "startFrame": 1126,
+     "endFrame": 1131
+    },
+    {
+     "w": "being",
+     "startFrame": 1131,
+     "endFrame": 1139
+    },
+    {
+     "w": "logged",
+     "startFrame": 1139,
+     "endFrame": 1148
+    },
+    {
+     "w": "in",
+     "startFrame": 1148,
+     "endFrame": 1152
+    },
+    {
+     "w": "is.",
+     "startFrame": 1152,
+     "endFrame": 1158
+    },
+    {
+     "w": "Proof",
+     "startFrame": 1158,
+     "endFrame": 1163
+    },
+    {
+     "w": "you",
+     "startFrame": 1163,
+     "endFrame": 1166
+    },
+    {
+     "w": "keep",
+     "startFrame": 1166,
+     "endFrame": 1170
+    },
+    {
+     "w": "showing.",
+     "startFrame": 1170,
+     "endFrame": 1179
+    }
+   ]
+  },
+  {
+   "id": 10,
+   "speaker": "human",
+   "emotion": "amused",
+   "text": "Huh. That's actually simple.",
+   "startFrame": 1189,
+   "endFrame": 1227,
+   "words": [
+    {
+     "w": "Huh.",
+     "startFrame": 1190,
+     "endFrame": 1198
+    },
+    {
+     "w": "That's",
+     "startFrame": 1198,
+     "endFrame": 1209
+    },
+    {
+     "w": "actually",
+     "startFrame": 1209,
+     "endFrame": 1224
+    },
+    {
+     "w": "simple.",
+     "startFrame": 1224,
+     "endFrame": 1226
+    }
+   ]
+  },
+  {
+   "id": 11,
+   "speaker": "claude",
+   "emotion": "happy",
+   "text": "Most things are, once you see them move. Next stop: home.",
+   "startFrame": 1235,
+   "endFrame": 1312,
+   "words": [
+    {
+     "w": "Most",
+     "startFrame": 1235,
+     "endFrame": 1243
+    },
+    {
+     "w": "things",
+     "startFrame": 1243,
+     "endFrame": 1251
+    },
+    {
+     "w": "are,",
+     "startFrame": 1251,
+     "endFrame": 1256
+    },
+    {
+     "w": "once",
+     "startFrame": 1256,
+     "endFrame": 1262
+    },
+    {
+     "w": "you",
+     "startFrame": 1262,
+     "endFrame": 1267
+    },
+    {
+     "w": "see",
+     "startFrame": 1267,
+     "endFrame": 1272
+    },
+    {
+     "w": "them",
+     "startFrame": 1272,
+     "endFrame": 1274
+    },
+    {
+     "w": "move.",
+     "startFrame": 1276,
+     "endFrame": 1290
+    },
+    {
+     "w": "Next",
+     "startFrame": 1290,
+     "endFrame": 1296
+    },
+    {
+     "w": "stop:",
+     "startFrame": 1296,
+     "endFrame": 1302
+    },
+    {
+     "w": "home.",
+     "startFrame": 1302,
+     "endFrame": 1310
+    }
+   ]
+  }
+ ],
+ "emotionKeys": {
+  "claude": [
+   {
+    "frame": 1,
+    "emotion": "neutral",
+    "intensity": 0.0
+   },
+   {
+    "frame": 285,
+    "emotion": "happy",
+    "intensity": 0.8
+   },
+   {
+    "frame": 322,
+    "emotion": "neutral",
+    "intensity": 0.0
+   },
+   {
+    "frame": 336,
+    "emotion": "curious",
+    "intensity": 0.4
+   },
+   {
+    "frame": 461,
+    "emotion": "neutral",
+    "intensity": 0.0
+   },
+   {
+    "frame": 465,
+    "emotion": "excited",
+    "intensity": 0.8
+   },
+   {
+    "frame": 592,
+    "emotion": "neutral",
+    "intensity": 0.0
+   },
+   {
+    "frame": 606,
+    "emotion": "curious",
+    "intensity": 0.4
+   },
+   {
+    "frame": 647,
+    "emotion": "neutral",
+    "intensity": 0.0
+   },
+   {
+    "frame": 651,
+    "emotion": "thoughtful",
+    "intensity": 0.8
+   },
+   {
+    "frame": 808,
+    "emotion": "neutral",
+    "intensity": 0.0
+   },
+   {
+    "frame": 822,
+    "emotion": "curious",
+    "intensity": 0.4
+   },
+   {
+    "frame": 855,
+    "emotion": "neutral",
+    "intensity": 0.0
+   },
+   {
+    "frame": 859,
+    "emotion": "proud",
+    "intensity": 0.8
+   },
+   {
+    "frame": 1029,
+    "emotion": "neutral",
+    "intensity": 0.0
+   },
+   {
+    "frame": 1043,
+    "emotion": "curious",
+    "intensity": 0.4
+   },
+   {
+    "frame": 1087,
+    "emotion": "neutral",
+    "intensity": 0.0
+   },
+   {
+    "frame": 1091,
+    "emotion": "happy",
+    "intensity": 0.8
+   },
+   {
+    "frame": 1181,
+    "emotion": "neutral",
+    "intensity": 0.0
+   },
+   {
+    "frame": 1195,
+    "emotion": "amused",
+    "intensity": 0.4
+   },
+   {
+    "frame": 1227,
+    "emotion": "neutral",
+    "intensity": 0.0
+   },
+   {
+    "frame": 1231,
+    "emotion": "happy",
+    "intensity": 0.8
+   },
+   {
+    "frame": 1312,
+    "emotion": "neutral",
+    "intensity": 0.0
+   }
+  ],
+  "human": [
+   {
+    "frame": 1,
+    "emotion": "neutral",
+    "intensity": 0.0
+   },
+   {
+    "frame": 295,
+    "emotion": "amused",
+    "intensity": 0.4
+   },
+   {
+    "frame": 322,
+    "emotion": "neutral",
+    "intensity": 0.0
+   },
+   {
+    "frame": 326,
+    "emotion": "curious",
+    "intensity": 0.8
+   },
+   {
+    "frame": 461,
+    "emotion": "neutral",
+    "intensity": 0.0
+   },
+   {
+    "frame": 475,
+    "emotion": "curious",
+    "intensity": 0.4
+   },
+   {
+    "frame": 592,
+    "emotion": "neutral",
+    "intensity": 0.0
+   },
+   {
+    "frame": 596,
+    "emotion": "surprised",
+    "intensity": 0.8
+   },
+   {
+    "frame": 647,
+    "emotion": "neutral",
+    "intensity": 0.0
+   },
+   {
+    "frame": 661,
+    "emotion": "curious",
+    "intensity": 0.4
+   },
+   {
+    "frame": 808,
+    "emotion": "neutral",
+    "intensity": 0.0
+   },
+   {
+    "frame": 812,
+    "emotion": "curious",
+    "intensity": 0.8
+   },
+   {
+    "frame": 855,
+    "emotion": "neutral",
+    "intensity": 0.0
+   },
+   {
+    "frame": 869,
+    "emotion": "amused",
+    "intensity": 0.4
+   },
+   {
+    "frame": 1029,
+    "emotion": "neutral",
+    "intensity": 0.0
+   },
+   {
+    "frame": 1033,
+    "emotion": "curious",
+    "intensity": 0.8
+   },
+   {
+    "frame": 1087,
+    "emotion": "neutral",
+    "intensity": 0.0
+   },
+   {
+    "frame": 1101,
+    "emotion": "amused",
+    "intensity": 0.4
+   },
+   {
+    "frame": 1181,
+    "emotion": "neutral",
+    "intensity": 0.0
+   },
+   {
+    "frame": 1185,
+    "emotion": "amused",
+    "intensity": 0.8
+   },
+   {
+    "frame": 1227,
+    "emotion": "neutral",
+    "intensity": 0.0
+   },
+   {
+    "frame": 1241,
+    "emotion": "amused",
+    "intensity": 0.4
+   },
+   {
+    "frame": 1312,
+    "emotion": "neutral",
+    "intensity": 0.0
+   }
+  ]
+ },
+ "envelopes": {
+  "claude": "envelope_claude.json",
+  "human": "envelope_human.json",
+  "length": 1335,
+  "index": "value[i] is frame i+1"
+ },
+ "phone": {
+  "shotId": "S02",
+  "phoneText": "Claude, I wanna go home.",
+  "startFrame": 109,
+  "charsPerSec": 12,
+  "typingEndFrame": 157,
+  "sendFrame": 163,
+  "visibleChars": "min(len, floor((frame - startFrame) * charsPerSec / fps)) for frame >= startFrame"
+ },
+ "motionCues": {
+  "human_exit_start": 13,
+  "human_at_curb": 73,
+  "car_arrive_start": 181,
+  "car_stopped": 253,
+  "door_closed": 296,
+  "drive_start": 277,
+  "end": 1336
+ },
+ "motionCueAssumptions": {
+  "human_exit_start": "0.5 s into the first EST shot",
+  "human_at_curb": "1.0 s before the first EST shot ends",
+  "car_arrive_start": "start of the pickup EST shot",
+  "car_stopped": "car approach takes 3.0 s",
+  "door_closed": "0.8 s after the pickup shot ends (happens off screen at the cut)",
+  "drive_start": "first interior frame",
+  "end": "exclusive end frame of the video"
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "neutral": "{'max_stretch': 2.37, 'bad_edges': 0, 'flipped_faces': 2, 'zmin': -0.0, 'zmax': 1.748, 'xspan': 0.618}",
+ "arms_up": "{'max_stretch': 8.46, 'bad_edges': 66, 'flipped_faces': 55, 'zmin': -0.0, 'zmax': 1.931, 'xspan': 0.873}",
+ "elbows_120": "{'max_stretch': 3.97, 'bad_edges': 9, 'flipped_faces': 66, 'zmin': -0.0, 'zmax': 1.748, 'xspan': 0.621}",
+ "head_turn_L70": "{'max_stretch': 2.37, 'bad_edges': 0, 'flipped_faces': 2, 'zmin': -0.0, 'zmax': 1.748, 'xspan': 0.618}",
+ "head_turn_R70": "{'max_stretch': 2.37, 'bad_edges': 0, 'flipped_faces': 2, 'zmin': -0.0, 'zmax': 1.748, 'xspan': 0.618}",
+ "spine_twist": "{'max_stretch': 4.11, 'bad_edges': 1, 'flipped_faces': 8, 'zmin': -0.0, 'zmax': 1.748, 'xspan': 0.618}",
+ "seated": "{'max_stretch': 6.35, 'bad_edges': 27, 'flipped_faces': 64, 'zmin': -0.098, 'zmax': 1.248, 'xspan': 0.618}",
+ "crouch": "{'max_stretch': 9.0, 'bad_edges': 35, 'flipped_faces': 120, 'zmin': 0.191, 'zmax': 1.298, 'xspan': 0.618}",
+ "ankle_flex": "{'max_stretch': 2.49, 'bad_edges': 1, 'flipped_faces': 2, 'zmin': -0.076, 'zmax': 1.748, 'xspan': 0.618}",
+ "finger_curl": "{'max_stretch': 2.37, 'bad_edges': 1, 'flipped_faces': 119, 'zmin': -0.0, 'zmax': 1.748, 'xspan': 0.618}"
+}

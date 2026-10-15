@@ -1,0 +1,17 @@
+result: PASS  markers == timeline shot starts and cameras  14 markers
+PASS  frame range 1..N at 24 fps  1..1335 @ 24
+PASS  active camera correct at first/last frame of all 14 shots  []
+PASS  mirror aim key at every interior cut  11/11 cuts
+PASS  car stationary frames 253-277  at (5.0, -2.0, 0.0)
+PASS  car has come to rest at 253 (last step < 0.01 m)  step 0.0029 m
+PASS  human within 0.3 m (along the road) of the rear door at the curb  door (4.03,-2.48) human (4.03,-4.55); lateral gap 2.07 m (curb to car side)
+PASS  speed never negative, ends at 8.5 m/s  min 0.00 end 8.501
+PASS  no speed jump (max |accel| < 5 m/s2 = 0.5 g)  max accel 3.69 m/s2 at frame 322
+PASS  smooth departure (jerk after drive_start < 8 m/s3)  max jerk 6.48
+PASS  car stays on the lane path and at the commanded arclength (+-0.5 m)  (frame, off-path m, arclength err m): [(300, 0.0, 0.0), (400, 0.0, 0.0), (600, 0.0, 0.0), (800, 0.0, 0.0), (1000, 0.0, 0.0), (1200, 0.0, 0.0), (1335, 0.0, 0.0)]
+PASS  distance driven after drive_start  359.8 m in 44.1 s; end arclength 359.8 m of 1144
+PASS  seated human hidden before the cut and shown from it  {276: (True, True, False, False), 277: (False, False, True, True)}
+PASS  street human + phone shown until the cut and hidden after  
+PASS  typed characters follow the timeline formula; sent bubble from sendFrame  []
+
+15/15 checks passed
