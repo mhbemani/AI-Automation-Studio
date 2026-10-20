@@ -6,6 +6,11 @@ A small AI-assisted studio that produces short educational videos (software, AI,
 
 **Run it:** [docs/QUICKSTART.md](docs/QUICKSTART.md) turns a storyboard into a narrated MP4 with a few commands (tested from a fresh clone).
 
+## Demo
+A 26-second explainer generated from `lab/integration/storyboard.json` with the quickstart (silent preview below; [watch it with narration](docs/media/demo.mp4)):
+
+![Demo: storyboard to video](docs/media/demo.gif)
+
 ## Map
 | Folder | What it is |
 |---|---|

@@ -139,3 +139,8 @@ lab/animation-build/previews/
 
 # release staging (zips and checksums are attached to releases, never committed)
 dist/
+
+# demo clips for the README are the one media exception (kept last so it wins)
+!docs/media/
+!docs/media/*.gif
+!docs/media/*.mp4
