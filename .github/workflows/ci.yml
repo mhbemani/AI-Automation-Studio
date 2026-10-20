@@ -1,0 +1,18 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate the sample storyboard
+        working-directory: lab/integration
+        run: node -e "import('./stages/validate.mjs').then(m=>{m.validateStoryboard(JSON.parse(require('fs').readFileSync('storyboard.json')));console.log('storyboard valid')})"
+      - name: Pre-commit guard rules still hold (no forbidden files or large files tracked)
+        run: |
+          bad=$(git ls-files | grep -E '\.(blend|fbx|glb|wav|mp3|zip|pem|ckpt|pth|onnx|safetensors)$' || true)
+          big=$(git ls-files -z | xargs -0 du -k | awk '$1>5120{print $2}')
+          if [ -n "$bad$big" ]; then echo "$bad $big"; exit 1; fi
